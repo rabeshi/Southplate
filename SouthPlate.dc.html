@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></link>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+body{margin:0;background:#FAFAF8;}
+a{color:#2E7D32;text-decoration:none;}
+a:hover{color:#1F5D24;text-decoration:underline;}
+::placeholder{color:#9AA39C;}
+button{font-family:inherit;cursor:pointer;}
+input,textarea,select{font-family:inherit;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;font-family:Inter,-apple-system,sans-serif;color:#1C1C1C;background:#FAFAF8;">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="animation:fadeIn 0.4s ease;">
+
+<!-- MARKETING NAV -->
+<div style="position:sticky;top:0;z-index:50;background:#FFFFFFEE;backdrop-filter:blur(8px);border-bottom:1px solid #E7E9E1;display:flex;align-items:center;justify-content:space-between;padding:16px 64px;">
+<div style="display:flex;align-items:center;gap:10px;cursor:pointer;" onClick="{{ goHome }}">
+<div style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#2E7D32,#66BB6A);display:flex;align-items:center;justify-content:center;">
+<i data-lucide="leaf" style="width:20px;height:20px;color:#fff;"></i>
+</div>
+<div>
+<div style="font-weight:800;font-size:19px;line-height:1;">SouthPlate</div>
+<div style="font-size:10px;color:#8A9189;letter-spacing:0.02em;">Dietary Assessment AI</div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:32px;">
+<a href="#features" style="color:#1C1C1C;font-size:14px;font-weight:500;">Features</a>
+<a href="#how-it-works" style="color:#1C1C1C;font-size:14px;font-weight:500;">How It Works</a>
+<a href="#partners" style="color:#1C1C1C;font-size:14px;font-weight:500;">Partners</a>
+<a href="#partners" style="color:#1C1C1C;font-size:14px;font-weight:500;">Resources</a>
+<a href="#mission" style="color:#1C1C1C;font-size:14px;font-weight:500;">About</a>
+</div>
+<div style="display:flex;align-items:center;gap:16px;">
+<div style="display:flex;align-items:center;gap:4px;font-size:14px;color:#5C6660;cursor:pointer;">
+<i data-lucide="globe" style="width:16px;height:16px;"></i> EN <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+</div>
+<button onClick="{{ goLogin }}" style="background:#2E7D32;color:#fff;border:none;padding:10px 20px;border-radius:10px;font-weight:600;font-size:14px;">Get Started</button>
+</div>
+</div>
+
+<!-- HERO -->
+<div style="max-width:1280px;margin:0 auto;padding:72px 64px 48px;display:flex;gap:56px;align-items:center;flex-wrap:wrap;">
+<div style="flex:1;min-width:420px;">
+<div style="display:inline-flex;align-items:center;gap:6px;background:#EAF4EA;color:#2E7D32;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:20px;">
+<i data-lucide="map-pin" style="width:14px;height:14px;"></i> Built for the Global South
+</div>
+<h1 style="font-size:52px;line-height:1.1;font-weight:800;margin:0 0 20px;letter-spacing:-0.02em;">
+Understand Local Foods.<br/>Improve Nutrition.<br/><span style="color:#2E7D32;">Empower Communities.</span>
+</h1>
+<p style="font-size:17px;line-height:1.6;color:#5C6660;max-width:520px;margin:0 0 32px;">SouthPlate combines multimodal AI, local food ontologies, and food composition databases to deliver culturally relevant dietary assessment for researchers, clinicians, and communities across the Global South.</p>
+<div style="display:flex;gap:14px;margin-bottom:32px;flex-wrap:wrap;">
+<button onClick="{{ goAssessment }}" style="background:#2E7D32;color:#fff;border:none;padding:14px 24px;border-radius:12px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px;">
+<i data-lucide="camera" style="width:18px;height:18px;"></i> Analyze a Meal
+</button>
+<button onClick="{{ trySample }}" style="background:#fff;color:#1C1C1C;border:1px solid #D9DCD2;padding:14px 24px;border-radius:12px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px;">
+<i data-lucide="play" style="width:18px;height:18px;"></i> Try a Sample
+</button>
+</div>
+<div style="display:flex;gap:28px;flex-wrap:wrap;">
+<sc-for list="{{ trustBadges }}" as="tb" hint-placeholder-count="3">
+<div style="display:flex;align-items:center;gap:8px;">
+<i data-lucide="{{ tb.icon }}" style="width:18px;height:18px;color:#2E7D32;"></i>
+<span style="font-size:13px;font-weight:600;color:#1C1C1C;">{{ tb.label }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="flex:1.3;min-width:460px;display:flex;justify-content:center;">
+<img src="uploads/ChatGPT Image Aug 6, 2026, 09_14_26 AM.png" alt="Meal analysis: plate of ugali, sukuma wiki, beans, grilled chicken and plantain with an assessment result phone mockup" style="width:100%;max-width:1400px;height:auto;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,#000 65%,transparent 100%);mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,#000 65%,transparent 100%);"></img>
+</div>
+</div>
+
+<!-- STATS -->
+<div style="max-width:1280px;margin:0 auto 64px;padding:0 64px;">
+<div style="background:#F1F6EF;border-radius:20px;padding:32px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+<sc-for list="{{ statsDisplay }}" as="st" hint-placeholder-count="5">
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:120px;">
+<div style="font-size:28px;font-weight:800;color:#1C1C1C;">{{ st.display }}{{ st.suffix }}</div>
+<div style="font-size:13px;color:#5C6660;">{{ st.label }}</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- FEATURES -->
+<div id="features" style="max-width:1280px;margin:0 auto;padding:32px 64px 80px;">
+<h2 style="font-size:32px;font-weight:800;text-align:center;margin:0 0 40px;">Everything You Need to Assess Diets</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+<sc-for list="{{ features }}" as="f" hint-placeholder-count="5">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:28px 24px;transition:box-shadow .2s;" style-hover="box-shadow:0 12px 24px rgba(28,28,28,0.08);">
+<div style="width:52px;height:52px;border-radius:14px;background:#EAF4EA;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+<i data-lucide="{{ f.icon }}" style="width:24px;height:24px;color:#2E7D32;"></i>
+</div>
+<div style="font-weight:700;font-size:16px;margin-bottom:8px;">{{ f.title }}</div>
+<div style="font-size:14px;color:#5C6660;line-height:1.5;">{{ f.desc }}</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div id="how-it-works" style="background:#FBFBF8;padding:80px 64px;border-top:1px solid #ECEEE7;border-bottom:1px solid #ECEEE7;">
+<div style="max-width:1280px;margin:0 auto;">
+<h2 style="font-size:32px;font-weight:800;text-align:center;margin:0 0 48px;">How SouthPlate Works</h2>
+<div style="display:flex;align-items:flex-start;justify-content:center;gap:8px;flex-wrap:wrap;">
+<sc-for list="{{ steps }}" as="step" hint-placeholder-count="5">
+<div style="display:flex;align-items:flex-start;gap:8px;">
+<div style="width:150px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;">
+<div style="width:64px;height:64px;border-radius:50%;background:#fff;border:2px solid #2E7D32;display:flex;align-items:center;justify-content:center;position:relative;">
+<i data-lucide="{{ step.icon }}" style="width:26px;height:26px;color:#2E7D32;"></i>
+<div style="position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:#2E7D32;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;">{{ step.n }}</div>
+</div>
+<div style="font-weight:700;font-size:14px;">{{ step.title }}</div>
+<div style="font-size:12px;color:#5C6660;line-height:1.4;">{{ step.desc }}</div>
+</div>
+<sc-if value="{{ step.hasArrow }}" hint-placeholder-val="{{ true }}">
+<div style="padding-top:22px;"><i data-lucide="arrow-right" style="width:20px;height:20px;color:#C7CBBE;"></i></div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<!-- AUDIENCES -->
+<div style="max-width:1280px;margin:0 auto;padding:80px 64px;">
+<h2 style="font-size:32px;font-weight:800;text-align:center;margin:0 0 40px;">Built for Impact Across the Global South</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+<sc-for list="{{ audiences }}" as="aud" hint-placeholder-count="4">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:26px 22px;">
+<div style="width:48px;height:48px;border-radius:12px;background:{{ aud.bg }};display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+<i data-lucide="{{ aud.icon }}" style="width:22px;height:22px;color:{{ aud.color }};"></i>
+</div>
+<div style="font-weight:700;font-size:16px;margin-bottom:6px;">{{ aud.title }}</div>
+<div style="font-size:13px;color:#5C6660;line-height:1.5;margin-bottom:14px;">{{ aud.desc }}</div>
+<span style="font-size:13px;font-weight:600;color:#2E7D32;display:flex;align-items:center;gap:4px;">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- WHY SOUTHPLATE -->
+<div id="mission" style="background:#F1F6EF;padding:80px 64px;">
+<div style="max-width:1280px;margin:0 auto;display:flex;gap:56px;align-items:center;flex-wrap:wrap;">
+<div style="flex:1;min-width:380px;">
+<h2 style="font-size:30px;font-weight:800;margin:0 0 20px;">Why SouthPlate</h2>
+<p style="font-size:15px;color:#5C6660;line-height:1.6;margin:0 0 20px;">Global nutrition science has long underrepresented the foods people in the Global South actually eat. SouthPlate closes that gap by grounding every assessment in local food ontologies and composition tables.</p>
+<sc-for list="{{ missionPoints }}" as="mp" hint-placeholder-count="4">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+<i data-lucide="check-circle" style="width:18px;height:18px;color:#2E7D32;flex-shrink:0;"></i>
+<span style="font-size:14px;font-weight:600;">{{ mp }}</span>
+</div>
+</sc-for>
+</div>
+<div style="flex:1;min-width:380px;background:#fff;border-radius:18px;padding:16px;">
+<img src="uploads/ChatGPT Image Aug 6, 2026, 09_32_15 AM.png" alt="Food ontology and knowledge graph example: Ugali mapped to cereals & grains, food groups, food composition tables, cultural context, nutrient profile, and local names" style="width:92%;height:auto;border-radius:10px;display:block;margin:0 auto;"></img>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIAL / MISSION / PARTNERS -->
+<div id="partners" style="max-width:1280px;margin:0 auto;padding:80px 64px;display:grid;grid-template-columns:1.2fr 1fr 1.3fr;gap:32px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:26px;">
+<div style="display:flex;gap:14px;align-items:flex-start;">
+<div style="width:52px;height:52px;border-radius:50%;flex-shrink:0;background:repeating-linear-gradient(45deg,#EEEFE8 0px,#EEEFE8 6px,#E4E6DC 6px,#E4E6DC 12px);"></div>
+<div>
+<div style="font-size:14px;line-height:1.6;color:#1C1C1C;margin-bottom:10px;">"SouthPlate helps us value our local foods and turn data into action for healthier communities."</div>
+<div style="font-weight:700;font-size:13px;">Dr. Amina Diallo</div>
+<div style="font-size:12px;color:#8A9189;">Nutrition Researcher, Senegal</div>
+</div>
+</div>
+</div>
+<div>
+<div style="width:40px;height:40px;border-radius:10px;background:#EAF4EA;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+<i data-lucide="target" style="width:20px;height:20px;color:#2E7D32;"></i>
+</div>
+<div style="font-weight:700;font-size:15px;margin-bottom:8px;">Our Mission</div>
+<div style="font-size:13px;color:#5C6660;line-height:1.6;">To harness AI and local knowledge to make nutrition assessment accurate, inclusive, and accessible for every community in the Global South.</div>
+</div>
+<div>
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Supported By Partners Worldwide</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+<sc-for list="{{ partners }}" as="p" hint-placeholder-count="7">
+<div style="border:1px solid #ECEEE7;border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:#8A9189;">{{ p }}</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div style="background:linear-gradient(135deg,#2E7D32,#1F5D24);padding:72px 64px;text-align:center;">
+<h2 style="color:#fff;font-size:34px;font-weight:800;margin:0 0 24px;">Ready to Transform Nutrition?</h2>
+<div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+<button onClick="{{ goLogin }}" style="background:#fff;color:#2E7D32;border:none;padding:14px 26px;border-radius:12px;font-weight:700;font-size:15px;">Get Started</button>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div style="background:#12331A;color:#D7E0D6;padding:64px 64px 28px;">
+<div style="max-width:1280px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between;">
+<div style="max-width:260px;">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+<div style="width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#66BB6A,#2E7D32);display:flex;align-items:center;justify-content:center;">
+<i data-lucide="leaf" style="width:18px;height:18px;color:#fff;"></i>
+</div>
+<div style="font-weight:800;font-size:17px;color:#fff;">SouthPlate</div>
+</div>
+<div style="font-size:13px;line-height:1.6;color:#9EB09B;">Empowering researchers, clinicians, and communities with AI-driven nutrition insights for better health outcomes.</div>
+<div style="display:flex;gap:10px;margin-top:16px;">
+<sc-for list="{{ socialIcons }}" as="si" hint-placeholder-count="4">
+<div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+<i data-lucide="{{ si }}" style="width:15px;height:15px;color:#D7E0D6;"></i>
+</div>
+</sc-for>
+</div>
+</div>
+<sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="4">
+<div>
+<div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:14px;">{{ col.title }}</div>
+<div style="display:flex;flex-direction:column;gap:9px;">
+<sc-for list="{{ col.links }}" as="lnk" hint-placeholder-count="4">
+<span style="font-size:13px;color:#9EB09B;cursor:pointer;">{{ lnk }}</span>
+</sc-for>
+</div>
+</div>
+</sc-for>
+<div style="min-width:220px;">
+<div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:14px;">Stay Updated</div>
+<div style="font-size:13px;color:#9EB09B;margin-bottom:12px;">Subscribe for the latest research and product news.</div>
+<div style="display:flex;gap:8px;">
+<input placeholder="Enter your email" style="flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:10px 12px;color:#fff;font-size:13px;"></input>
+<button style="background:#66BB6A;color:#12331A;border:none;padding:0 16px;border-radius:8px;font-weight:700;font-size:13px;">Subscribe</button>
+</div>
+</div>
+</div>
+<div style="max-width:1280px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#7F9280;">
+<div>© 2026 SouthPlate. All rights reserved.</div>
+<div style="display:flex;gap:20px;"><span>Privacy Policy</span><span>Terms of Use</span><span>Cookies Policy</span></div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ================= LOGIN ================= -->
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;">
+<div style="width:100%;max-width:400px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px;cursor:pointer;" onClick="{{ goHome }}">
+<div style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#2E7D32,#66BB6A);display:flex;align-items:center;justify-content:center;">
+<i data-lucide="leaf" style="width:20px;height:20px;color:#fff;"></i>
+</div>
+<div style="font-weight:800;font-size:19px;">SouthPlate</div>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:32px;box-shadow:0 12px 32px rgba(28,28,28,0.06);">
+<div style="font-weight:800;font-size:20px;margin-bottom:4px;text-align:center;">Welcome back</div>
+<div style="font-size:13.5px;color:#8A9189;text-align:center;margin-bottom:24px;">Sign in to your SouthPlate account</div>
+<div style="display:flex;flex-direction:column;gap:14px;margin-bottom:18px;">
+<div><div style="font-size:12px;color:#5C6660;margin-bottom:5px;font-weight:600;">Username</div><input placeholder="you@example.com" style="width:100%;box-sizing:border-box;border:1px solid #E7E9E1;border-radius:10px;padding:11px 13px;font-size:14px;"></input></div>
+<div><div style="font-size:12px;color:#5C6660;margin-bottom:5px;font-weight:600;">Password</div><input type="password" placeholder="••••••••" style="width:100%;box-sizing:border-box;border:1px solid #E7E9E1;border-radius:10px;padding:11px 13px;font-size:14px;"></input></div>
+</div>
+<button onClick="{{ goDashboard }}" style="width:100%;background:#2E7D32;color:#fff;border:none;padding:12px;border-radius:10px;font-weight:700;font-size:14px;margin-bottom:16px;">Sign In</button>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;color:#B7BCAD;font-size:12px;font-weight:600;"><div style="flex:1;height:1px;background:#ECEEE7;"></div>OR<div style="flex:1;height:1px;background:#ECEEE7;"></div></div>
+<button onClick="{{ goDashboard }}" style="width:100%;background:#fff;color:#1C1C1C;border:1px solid #D9DCD2;padding:12px;border-radius:10px;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;gap:10px;">
+<svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.13-.85 2.09-1.81 2.73v2.27h2.92c1.71-1.57 2.69-3.88 2.69-6.64z"></path><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.17l-2.92-2.27c-.81.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.71H.96v2.33C2.44 15.98 5.48 18 9 18z"></path><path fill="#FBBC05" d="M3.97 10.71a5.4 5.4 0 0 1 0-3.42V4.96H.96a9 9 0 0 0 0 8.08l3.01-2.33z"></path><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"></path></svg>
+Continue with Google
+</button>
+</div>
+<div style="text-align:center;margin-top:20px;font-size:13px;color:#8A9189;">
+<span style="cursor:pointer;" onClick="{{ goHome }}">← Back to homepage</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ================= APP SHELL ================= -->
+<sc-if value="{{ isApp }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;min-height:100vh;">
+
+<!-- SIDEBAR -->
+<div style="width:260px;flex-shrink:0;background:#fff;border-right:1px solid #ECEEE7;display:flex;flex-direction:column;padding:20px 16px;position:sticky;top:0;height:100vh;overflow-y:auto;">
+<div style="display:flex;align-items:center;gap:10px;padding:4px 8px 16px;cursor:pointer;" onClick="{{ goHome }}">
+<div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#2E7D32,#66BB6A);display:flex;align-items:center;justify-content:center;">
+<i data-lucide="leaf" style="width:18px;height:18px;color:#fff;"></i>
+</div>
+<div>
+<div style="font-weight:800;font-size:16px;line-height:1;">SouthPlate</div>
+<div style="font-size:9px;color:#8A9189;">Dietary Assessment AI</div>
+</div>
+</div>
+
+<div style="display:flex;background:#F1F6EF;border-radius:10px;padding:3px;margin-bottom:16px;">
+<sc-for list="{{ portalPills }}" as="pp" hint-placeholder-count="3">
+<div onClick="{{ pp.onClick }}" style="flex:1;text-align:center;padding:7px 0;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;{{ pp.style }}">{{ pp.label }}</div>
+</sc-for>
+</div>
+
+<sc-if value="{{ isClinical }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:2px;margin-bottom:14px;">
+<sc-for list="{{ clinicalNavTop }}" as="n" hint-placeholder-count="4">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;{{ n.style }}">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:600;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+<div style="font-size:11px;font-weight:700;color:#A7AC9F;letter-spacing:0.05em;padding:8px 10px 6px;">KNOWLEDGE</div>
+<div style="display:flex;flex-direction:column;gap:2px;margin-bottom:14px;">
+<sc-for list="{{ clinicalNavKnowledge }}" as="n" hint-placeholder-count="4">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;color:#5C6660;">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:500;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+<div style="font-size:11px;font-weight:700;color:#A7AC9F;letter-spacing:0.05em;padding:8px 10px 6px;">TOOLS</div>
+<div style="display:flex;flex-direction:column;gap:2px;margin-bottom:14px;">
+<sc-for list="{{ clinicalNavTools }}" as="n" hint-placeholder-count="3">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;color:#5C6660;">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:500;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+<div style="font-size:11px;font-weight:700;color:#A7AC9F;letter-spacing:0.05em;padding:8px 10px 6px;">ACCOUNT</div>
+<div style="display:flex;flex-direction:column;gap:2px;">
+<sc-for list="{{ clinicalNavAccount }}" as="n" hint-placeholder-count="2">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;{{ n.style }}">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:600;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearch }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:2px;">
+<sc-for list="{{ researchNav }}" as="n" hint-placeholder-count="6">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;{{ n.style }}">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:600;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdmin }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:2px;">
+<sc-for list="{{ adminNav }}" as="n" hint-placeholder-count="7">
+<div onClick="{{ n.onClick }}" style="display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;cursor:pointer;{{ n.style }}">
+<i data-lucide="{{ n.icon }}" style="width:17px;height:17px;"></i><span style="font-size:13.5px;font-weight:600;">{{ n.label }}</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isClinical }}" hint-placeholder-val="{{ true }}">
+<div style="margin-top:auto;background:linear-gradient(135deg,#2E7D32,#1F5D24);border-radius:14px;padding:16px;color:#fff;">
+<div style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;margin-bottom:6px;"><i data-lucide="crown" style="width:15px;height:15px;color:#F9A825;"></i>SouthPlate Premium</div>
+<div style="font-size:11.5px;color:#DCEBDA;line-height:1.5;margin-bottom:10px;">Unlock advanced analytics, API access, and more.</div>
+<button style="width:100%;background:#fff;color:#2E7D32;border:none;padding:8px;border-radius:8px;font-weight:700;font-size:12.5px;">Upgrade Now</button>
+</div>
+</sc-if>
+</div>
+
+<!-- MAIN -->
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:16px 32px;border-bottom:1px solid #ECEEE7;background:#fff;">
+<div style="display:flex;align-items:center;gap:14px;">
+<i data-lucide="menu" style="width:20px;height:20px;color:#5C6660;"></i>
+<div style="font-size:13px;font-weight:700;color:#8A9189;text-transform:uppercase;letter-spacing:0.04em;">{{ portalLabel }} Portal</div>
+</div>
+<div style="display:flex;align-items:center;gap:22px;">
+<div style="display:flex;align-items:center;gap:4px;font-size:13px;color:#5C6660;cursor:pointer;">
+<i data-lucide="globe" style="width:15px;height:15px;"></i> EN <i data-lucide="chevron-down" style="width:13px;height:13px;"></i>
+</div>
+<div style="position:relative;">
+<i data-lucide="bell" style="width:19px;height:19px;color:#5C6660;"></i>
+<div style="position:absolute;top:-6px;right:-6px;width:15px;height:15px;border-radius:50%;background:#F9A825;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+<div style="width:36px;height:36px;border-radius:50%;background:#2E7D32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">AO</div>
+<div>
+<div style="font-size:13px;font-weight:700;">Dr. Amara Okafor</div>
+<div style="font-size:11px;color:#8A9189;">Researcher</div>
+</div>
+<i data-lucide="chevron-down" style="width:14px;height:14px;color:#8A9189;"></i>
+</div>
+</div>
+</div>
+
+<div style="flex:1;padding:28px 32px;">
+
+<!-- ===== DASHBOARD ===== -->
+<sc-if value="{{ isDashboard }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;flex-wrap:wrap;gap:12px;">
+<div>
+<h1 style="font-size:26px;font-weight:800;margin:0 0 4px;">Hello, Dr. Amara 👋</h1>
+<div style="font-size:14px;color:#5C6660;">Here's your nutrition overview for today.</div>
+</div>
+<div style="border:1px solid #E7E9E1;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;">
+<i data-lucide="calendar" style="width:15px;height:15px;color:#2E7D32;"></i> Today
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.1fr 1fr 0.9fr;gap:18px;margin-bottom:18px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:2px;">Analyze Your Meal</div>
+<div style="font-size:12.5px;color:#8A9189;margin-bottom:14px;">Upload a meal image or describe it in text</div>
+<div style="display:flex;gap:10px;">
+<div style="flex:1;border:2px dashed #D9DCD2;border-radius:12px;padding:18px 10px;text-align:center;cursor:pointer;" onClick="{{ toggleImage }}">
+<i data-lucide="upload-cloud" style="width:24px;height:24px;color:#2E7D32;margin-bottom:6px;"></i>
+<div style="font-size:12.5px;font-weight:700;">{{ uploadLabel }}</div>
+<div style="font-size:10.5px;color:#8A9189;">JPG, PNG up to 10MB</div>
+</div>
+<div style="flex:1;">
+<textarea placeholder="Describe your meal..." value="{{ assessmentText }}" onChange="{{ setAssessmentText }}" style="width:100%;height:74px;border:1px solid #E7E9E1;border-radius:10px;padding:8px;font-size:12px;box-sizing:border-box;resize:none;"></textarea>
+</div>
+</div>
+<button onClick="{{ goAssessmentRun }}" style="margin-top:12px;width:100%;background:#2E7D32;color:#fff;border:none;padding:10px;border-radius:10px;font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:center;gap:6px;">
+<i data-lucide="sparkles" style="width:15px;height:15px;"></i> Analyze Meal
+</button>
+</div>
+
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+<div style="font-weight:700;font-size:15px;">Recent Assessment</div>
+<span style="background:#EAF4EA;color:#2E7D32;font-size:11px;font-weight:700;padding:3px 8px;border-radius:100px;">Completed</span>
+</div>
+<div style="display:flex;gap:12px;">
+<div style="width:88px;height:88px;flex-shrink:0;border-radius:12px;background:repeating-linear-gradient(45deg,#EEEFE8 0px,#EEEFE8 8px,#E4E6DC 8px,#E4E6DC 16px);"></div>
+<div style="flex:1;">
+<sc-for list="{{ detectedFoods }}" as="df" hint-placeholder-count="5">
+<div style="display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;">
+<span>{{ df.name }}</span><span style="color:#8A9189;">{{ df.qty }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="margin-top:12px;">
+<div style="display:flex;justify-content:space-between;font-size:11px;color:#5C6660;margin-bottom:4px;"><span>Portion Confidence</span><span style="font-weight:700;color:#2E7D32;">85%</span></div>
+<div style="height:6px;background:#ECEEE7;border-radius:100px;"><div style="width:85%;height:100%;background:#2E7D32;border-radius:100px;"></div></div>
+</div>
+</div>
+
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+<div style="font-weight:700;font-size:15px;">Today's Summary</div>
+</div>
+<div style="width:130px;height:130px;border-radius:50%;margin:0 auto 14px;position:relative;{{ donutStyle }}">
+<div style="position:absolute;inset:20px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+<div style="font-size:20px;font-weight:800;">2,145</div>
+<div style="font-size:10px;color:#8A9189;">kcal</div>
+</div>
+</div>
+<sc-for list="{{ macros }}" as="m" hint-placeholder-count="3">
+<div style="display:flex;justify-content:space-between;font-size:12px;padding:3px 0;">
+<span style="display:flex;align-items:center;gap:6px;"><span style="width:8px;height:8px;border-radius:50%;background:{{ m.color }};"></span>{{ m.label }}</span>
+<span style="font-weight:700;">{{ m.pct }}% ({{ m.grams }}g)</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.1fr 1fr 0.9fr;gap:18px;margin-bottom:18px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;"><div style="font-weight:700;font-size:15px;">Nutrient Summary</div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<sc-for list="{{ nutrients }}" as="nu" hint-placeholder-count="8">
+<div style="background:#F9FAF7;border-radius:10px;padding:10px;">
+<div style="font-size:17px;font-weight:800;">{{ nu.value }}</div>
+<div style="font-size:11px;color:#8A9189;">{{ nu.label }} ({{ nu.unit }})</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Daily Goal Progress</div>
+<sc-for list="{{ goalsDisplay }}" as="g" hint-placeholder-count="4">
+<div style="margin-bottom:14px;">
+<div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span style="font-weight:600;">{{ g.label }}</span><span style="color:#8A9189;">{{ g.value }} / {{ g.target }} {{ g.unit }}</span></div>
+<div style="height:6px;background:#ECEEE7;border-radius:100px;"><div style="height:100%;border-radius:100px;width:{{ g.pct }}%;background:{{ g.color }};"></div></div>
+</div>
+</sc-for>
+</div>
+
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Insights &amp; Recommendations</div>
+<sc-for list="{{ insights }}" as="ins" hint-placeholder-count="3">
+<div style="display:flex;gap:9px;margin-bottom:14px;">
+<i data-lucide="{{ ins.icon }}" style="width:16px;height:16px;color:{{ ins.color }};flex-shrink:0;margin-top:2px;"></i>
+<div>
+<div style="font-size:12.5px;font-weight:700;">{{ ins.title }}</div>
+<div style="font-size:11.5px;color:#8A9189;line-height:1.4;">{{ ins.desc }}</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.6fr 1fr;gap:18px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Recent Assessments</div>
+<div style="display:grid;grid-template-columns:1.3fr 0.8fr 1fr 0.8fr 0.8fr 0.7fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Date</div><div>Type</div><div>Foods</div><div>Calories</div><div>Confidence</div><div>Actions</div>
+</div>
+<sc-for list="{{ historyDisplay }}" as="h" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.3fr 0.8fr 1fr 0.8fr 0.8fr 0.7fr;align-items:center;padding:10px 6px;border-bottom:1px solid #F4F5F0;font-size:12.5px;">
+<div>{{ h.date }}</div>
+<div style="text-transform:capitalize;color:#5C6660;">{{ h.type }}</div>
+<div>{{ h.foods }} foods</div>
+<div>{{ h.calories }} kcal</div>
+<div><span style="background:{{ h.confBg }};color:{{ h.confColor }};padding:2px 8px;border-radius:100px;font-size:11px;font-weight:700;">{{ h.confidence }}%</span></div>
+<div style="display:flex;gap:8px;">
+<i data-lucide="eye" onClick="{{ h.onView }}" style="width:15px;height:15px;color:#5C6660;cursor:pointer;"></i>
+<i data-lucide="trash-2" style="width:15px;height:15px;color:#C7CBBE;"></i>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:18px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:20px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:12px;">Quick Actions</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+<div onClick="{{ goAssessmentPage }}" style="background:#F9FAF7;border-radius:10px;padding:12px;text-align:center;cursor:pointer;">
+<i data-lucide="plus-circle" style="width:18px;height:18px;color:#2E7D32;margin-bottom:4px;"></i>
+<div style="font-size:11.5px;font-weight:700;">New Assessment</div>
+</div>
+<div onClick="{{ exportData }}" style="background:#F9FAF7;border-radius:10px;padding:12px;text-align:center;cursor:pointer;">
+<i data-lucide="file-text" style="width:18px;height:18px;color:#2E7D32;margin-bottom:4px;"></i>
+<div style="font-size:11.5px;font-weight:700;">Generate Report</div>
+</div>
+<div onClick="{{ exportData }}" style="background:#F9FAF7;border-radius:10px;padding:12px;text-align:center;cursor:pointer;">
+<i data-lucide="download" style="width:18px;height:18px;color:#2E7D32;margin-bottom:4px;"></i>
+<div style="font-size:11.5px;font-weight:700;">Export Data</div>
+</div>
+<div onClick="{{ goPatients }}" style="background:#F9FAF7;border-radius:10px;padding:12px;text-align:center;cursor:pointer;">
+<i data-lucide="user-plus" style="width:18px;height:18px;color:#2E7D32;margin-bottom:4px;"></i>
+<div style="font-size:11.5px;font-weight:700;">Add Patient</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ===== NEW ASSESSMENT ===== -->
+<sc-if value="{{ isAssessmentPage }}" hint-placeholder-val="{{ false }}">
+<h1 style="font-size:24px;font-weight:800;margin:0 0 20px;">New Assessment</h1>
+
+<sc-if value="{{ stageIdle }}" hint-placeholder-val="{{ true }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:28px;max-width:760px;">
+<div style="display:flex;gap:16px;margin-bottom:18px;">
+<div onClick="{{ toggleImage }}" style="flex:1;border:2px dashed #D9DCD2;border-radius:14px;padding:36px 16px;text-align:center;cursor:pointer;{{ dropzoneStyle }}">
+<i data-lucide="{{ dropzoneIcon }}" style="width:32px;height:32px;color:#2E7D32;margin-bottom:10px;"></i>
+<div style="font-weight:700;font-size:14px;">{{ dropzoneLabel }}</div>
+<div style="font-size:12px;color:#8A9189;">Drag &amp; drop, or click to simulate an upload · JPG, PNG up to 10MB</div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;color:#8A9189;font-size:12px;font-weight:700;"><div style="flex:1;height:1px;background:#ECEEE7;"></div>OR<div style="flex:1;height:1px;background:#ECEEE7;"></div></div>
+<textarea placeholder="Describe your meal, e.g. 'Ugali, sukuma wiki, beans, and grilled chicken with a cup of milk.'" value="{{ assessmentText }}" onChange="{{ setAssessmentText }}" style="width:100%;height:96px;border:1px solid #E7E9E1;border-radius:12px;padding:12px;font-size:13.5px;box-sizing:border-box;resize:none;margin-bottom:8px;"></textarea>
+<div style="text-align:right;font-size:11px;color:#B7BCAD;margin-bottom:18px;">{{ charCount }}/500</div>
+<button onClick="{{ runAnalysis }}" style="background:#2E7D32;color:#fff;border:none;padding:13px 24px;border-radius:12px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;">
+<i data-lucide="sparkles" style="width:16px;height:16px;"></i> Analyze Meal
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ stageLoading }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:60px;max-width:760px;text-align:center;">
+<div style="width:44px;height:44px;border:4px solid #EAF4EA;border-top-color:#2E7D32;border-radius:50%;margin:0 auto 20px;animation:spin 0.8s linear infinite;"></div>
+<div style="font-weight:700;font-size:15px;margin-bottom:6px;">Analyzing your meal...</div>
+<div style="font-size:13px;color:#8A9189;">Recognizing foods, matching ontology classes, and estimating nutrients.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ stageResults }}" hint-placeholder-val="{{ false }}">
+<div style="max-width:960px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+<span style="background:#EAF4EA;color:#2E7D32;font-size:12px;font-weight:700;padding:5px 12px;border-radius:100px;display:flex;align-items:center;gap:6px;width:fit-content;"><i data-lucide="check-circle" style="width:14px;height:14px;"></i> High Confidence — 88%</span>
+<span onClick="{{ resetAssessment }}" style="font-size:13px;font-weight:600;color:#2E7D32;cursor:pointer;">Analyze another meal</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Detected Foods</div>
+<sc-for list="{{ mealDetailFoods }}" as="df" hint-placeholder-count="5">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ df.name }}</span><span style="color:#8A9189;"> · {{ df.qty }}</span></div>
+<span style="background:{{ df.confBg }};color:{{ df.confColor }};padding:2px 8px;border-radius:100px;font-size:11px;font-weight:700;">{{ df.confidence }}%</span>
+</div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Nutrition Summary</div>
+<div style="width:120px;height:120px;border-radius:50%;margin:0 auto 14px;position:relative;{{ donutStyle }}">
+<div style="position:absolute;inset:18px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;"><div style="font-size:19px;font-weight:800;">2,145</div><div style="font-size:10px;color:#8A9189;">kcal</div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+<sc-for list="{{ nutrients }}" as="nu" hint-placeholder-count="8">
+<div style="background:#F9FAF7;border-radius:10px;padding:8px;"><div style="font-size:14px;font-weight:800;">{{ nu.value }}</div><div style="font-size:10px;color:#8A9189;">{{ nu.label }}</div></div>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:12px;">
+<button onClick="{{ saveAssessment }}" style="background:#2E7D32;color:#fff;border:none;padding:12px 22px;border-radius:12px;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:8px;"><i data-lucide="save" style="width:16px;height:16px;"></i>Save to History</button>
+<button onClick="{{ generatePdf }}" style="background:#fff;color:#1C1C1C;border:1px solid #D9DCD2;padding:12px 22px;border-radius:12px;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:8px;"><i data-lucide="file-down" style="width:16px;height:16px;"></i>Generate PDF</button>
+</div>
+</div>
+</sc-if>
+</sc-if>
+
+<!-- ===== MEAL HISTORY ===== -->
+<sc-if value="{{ isHistory }}" hint-placeholder-val="{{ false }}">
+<h1 style="font-size:24px;font-weight:800;margin:0 0 20px;">Meal History</h1>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:grid;grid-template-columns:1.3fr 0.8fr 1fr 0.8fr 0.8fr 0.7fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Date</div><div>Type</div><div>Foods</div><div>Calories</div><div>Confidence</div><div>Actions</div>
+</div>
+<sc-for list="{{ historyDisplay }}" as="h" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.3fr 0.8fr 1fr 0.8fr 0.8fr 0.7fr;align-items:center;padding:12px 6px;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div>{{ h.date }}</div>
+<div style="text-transform:capitalize;color:#5C6660;">{{ h.type }}</div>
+<div>{{ h.foods }} foods</div>
+<div>{{ h.calories }} kcal</div>
+<div><span style="background:{{ h.confBg }};color:{{ h.confColor }};padding:2px 8px;border-radius:100px;font-size:11px;font-weight:700;">{{ h.confidence }}%</span></div>
+<div style="display:flex;gap:8px;">
+<i data-lucide="eye" onClick="{{ h.onView }}" style="width:15px;height:15px;color:#5C6660;cursor:pointer;"></i>
+<i data-lucide="trash-2" style="width:15px;height:15px;color:#C7CBBE;"></i>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<!-- ===== MEAL DETAIL ===== -->
+<sc-if value="{{ isMealDetail }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;cursor:pointer;" onClick="{{ backToHistory }}">
+<i data-lucide="arrow-left" style="width:18px;height:18px;color:#5C6660;"></i><span style="font-size:14px;font-weight:600;color:#5C6660;">Back to Meal History</span>
+</div>
+<div style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:20px;max-width:1100px;">
+<div>
+<div style="width:100%;aspect-ratio:1;border-radius:16px;background:repeating-linear-gradient(45deg,#EEEFE8 0px,#EEEFE8 10px,#E4E6DC 10px,#E4E6DC 20px);display:flex;align-items:center;justify-content:center;color:#8A9189;font-family:ui-monospace,monospace;font-size:12px;text-transform:uppercase;margin-bottom:14px;">meal photo</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:18px;">
+<div style="font-size:12.5px;color:#8A9189;margin-bottom:4px;">Assessed</div>
+<div style="font-weight:700;font-size:14px;margin-bottom:12px;">{{ selectedMeal.date }}</div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>Confidence</span><span style="font-weight:700;color:#2E7D32;">{{ selectedMeal.confidence }}%</span></div>
+<div style="height:6px;background:#ECEEE7;border-radius:100px;"><div style="height:100%;border-radius:100px;background:#2E7D32;width:{{ selectedMeal.confidence }}%;"></div></div>
+</div>
+</div>
+<div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:22px;margin-bottom:16px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Recognized Foods &amp; Ontology Mapping</div>
+<sc-for list="{{ mealDetailFoods }}" as="df" hint-placeholder-count="5">
+<div style="padding:10px 0;border-bottom:1px solid #F4F5F0;">
+<div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="font-weight:700;font-size:13.5px;">{{ df.name }}</span><span style="background:{{ df.confBg }};color:{{ df.confColor }};padding:1px 7px;border-radius:100px;font-size:10.5px;font-weight:700;">{{ df.confidence }}%</span></div>
+<div style="font-size:12px;color:#5C6660;">{{ df.qty }} · {{ df.calories }} kcal · {{ df.protein }}g protein</div>
+<div style="font-size:11.5px;color:#8A9189;font-family:ui-monospace,monospace;margin-top:2px;">{{ df.ontologyClass }} · FCT {{ df.fctCode }}</div>
+</div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:10px;">Explanation</div>
+<div style="font-size:13px;color:#5C6660;line-height:1.6;">Portion sizes were estimated from reference plate dimensions and ingredient volume ratios typical of the region. Each food was matched to the closest food composition entry using the food ontology; nutrient values are interpolated from the Kenya Food Composition Table where a direct match was unavailable.</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ===== PATIENTS ===== -->
+<sc-if value="{{ isPatients }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+<h1 style="font-size:24px;font-weight:800;margin:0;">My Patients</h1>
+<button onClick="{{ toastAdd }}" style="background:#2E7D32;color:#fff;border:none;padding:10px 18px;border-radius:10px;font-weight:700;font-size:13px;display:flex;align-items:center;gap:6px;"><i data-lucide="user-plus" style="width:15px;height:15px;"></i>Add Patient</button>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:grid;grid-template-columns:1.4fr 0.6fr 1fr 1fr 0.8fr 0.6fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Name</div><div>Age</div><div>Last Assessment</div><div>Avg. Calories</div><div>Trend</div><div>Action</div>
+</div>
+<sc-for list="{{ patients }}" as="p" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.4fr 0.6fr 1fr 1fr 0.8fr 0.6fr;align-items:center;padding:12px 6px;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div style="font-weight:600;">{{ p.name }}</div><div>{{ p.age }}</div><div style="color:#5C6660;">{{ p.last }}</div><div>{{ p.calories }} kcal</div>
+<div><i data-lucide="{{ p.trendIcon }}" style="width:16px;height:16px;color:{{ p.trendColor }};"></i></div>
+<i data-lucide="eye" style="width:15px;height:15px;color:#5C6660;cursor:pointer;"></i>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<!-- ===== SETTINGS ===== -->
+<sc-if value="{{ isSettings }}" hint-placeholder-val="{{ false }}">
+<h1 style="font-size:24px;font-weight:800;margin:0 0 20px;">Settings</h1>
+<div style="display:flex;flex-direction:column;gap:18px;max-width:640px;">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Profile</div>
+<div style="display:flex;flex-direction:column;gap:12px;">
+<div><div style="font-size:12px;color:#8A9189;margin-bottom:4px;">Full name</div><input value="Dr. Amara Okafor" style="width:100%;box-sizing:border-box;border:1px solid #E7E9E1;border-radius:9px;padding:9px 11px;font-size:13.5px;"></input></div>
+<div><div style="font-size:12px;color:#8A9189;margin-bottom:4px;">Email</div><input value="amara.okafor@southplate.org" style="width:100%;box-sizing:border-box;border:1px solid #E7E9E1;border-radius:9px;padding:9px 11px;font-size:13.5px;"></input></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Notifications</div>
+<sc-for list="{{ settingsToggles }}" as="tg" hint-placeholder-count="3">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;">
+<div><div style="font-size:13.5px;font-weight:600;">{{ tg.label }}</div><div style="font-size:11.5px;color:#8A9189;">{{ tg.desc }}</div></div>
+<div onClick="{{ tg.onClick }}" style="width:40px;height:22px;border-radius:100px;position:relative;cursor:pointer;{{ tg.trackStyle }}">
+<div style="width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:3px;{{ tg.knobStyle }}"></div>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Language &amp; Region</div>
+<select style="width:100%;box-sizing:border-box;border:1px solid #E7E9E1;border-radius:9px;padding:9px 11px;font-size:13.5px;">
+<option>English</option><option>French</option><option>Swahili</option><option>Portuguese</option>
+</select>
+</div>
+<button onClick="{{ saveSettings }}" style="background:#2E7D32;color:#fff;border:none;padding:12px 22px;border-radius:12px;font-weight:700;font-size:13.5px;width:fit-content;">Save Changes</button>
+</div>
+</sc-if>
+
+<!-- ===== RESEARCH PORTAL ===== -->
+<sc-if value="{{ isResearchPage }}" hint-placeholder-val="{{ false }}">
+<h1 style="font-size:24px;font-weight:800;margin:0 0 4px;">Research Portal</h1>
+<div style="font-size:13.5px;color:#8A9189;margin-bottom:22px;">Datasets, food ontology, composition tables, and model performance.</div>
+
+<sc-if value="{{ isResearchDatasets }}" hint-placeholder-val="{{ true }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Dataset Explorer</div>
+<div style="display:grid;grid-template-columns:1.6fr 1fr 0.8fr 1fr 0.7fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Name</div><div>Region</div><div>Records</div><div>Format</div><div></div>
+</div>
+<sc-for list="{{ datasets }}" as="d" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.6fr 1fr 0.8fr 1fr 0.7fr;align-items:center;padding:11px 6px;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div style="font-weight:600;">{{ d.name }}</div><div style="color:#5C6660;">{{ d.region }}</div><div>{{ d.records }}</div><div style="color:#5C6660;">{{ d.format }}</div>
+<i data-lucide="download" onClick="{{ exportData }}" style="width:16px;height:16px;color:#2E7D32;cursor:pointer;"></i>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearchOntology }}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+<sc-for list="{{ ontology }}" as="cat" hint-placeholder-count="4">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:18px;">
+<div style="font-weight:700;font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px;"><i data-lucide="folder-tree" style="width:16px;height:16px;color:#2E7D32;"></i>{{ cat.category }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;">
+<sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="4">
+<span style="background:#F1F6EF;color:#2E7D32;font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:100px;">{{ it }}</span>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearchComposition }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Food Composition Tables</div>
+<div style="display:grid;grid-template-columns:1.8fr 0.8fr 0.8fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Source</div><div>Coverage</div><div>Foods</div>
+</div>
+<sc-for list="{{ fctSources }}" as="fc" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.8fr 0.8fr 0.8fr;align-items:center;padding:11px 6px;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div style="font-weight:600;">{{ fc.name }}</div><div style="color:#2E7D32;font-weight:700;">{{ fc.coverage }}</div><div>{{ fc.foods }}</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearchPerformance }}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:18px;">
+<sc-for list="{{ performanceMetrics }}" as="pm" hint-placeholder-count="4">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:18px;">
+<div style="font-size:22px;font-weight:800;">{{ pm.value }}</div><div style="font-size:12px;color:#8A9189;">{{ pm.label }}</div>
+</div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Accuracy by Region</div>
+<sc-for list="{{ regionAccuracy }}" as="ra" hint-placeholder-count="4">
+<div style="margin-bottom:12px;">
+<div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px;"><span>{{ ra.region }}</span><span style="font-weight:700;">{{ ra.pct }}%</span></div>
+<div style="height:7px;background:#ECEEE7;border-radius:100px;"><div style="height:100%;border-radius:100px;background:#2E7D32;width:{{ ra.pct }}%;"></div></div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearchApi }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;margin-bottom:16px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">API Endpoints</div>
+<sc-for list="{{ apiEndpoints }}" as="ep" hint-placeholder-count="4">
+<div style="display:flex;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<span style="background:#EAF4EA;color:#2E7D32;font-weight:700;font-size:11px;padding:3px 8px;border-radius:6px;">{{ ep.method }}</span>
+<span style="font-family:ui-monospace,monospace;font-size:12.5px;">{{ ep.path }}</span>
+<span style="color:#8A9189;font-size:12.5px;">{{ ep.desc }}</span>
+</div>
+</sc-for>
+</div>
+<div style="background:#1C1C1C;border-radius:16px;padding:20px;color:#D7E0D6;font-family:ui-monospace,monospace;font-size:12.5px;line-height:1.7;overflow-x:auto;">
+<div>curl -X POST https://api.southplate.ai/v1/assess/image \</div>
+<div>&nbsp;&nbsp;-H "Authorization: Bearer $API_KEY" \</div>
+<div>&nbsp;&nbsp;-F "image=@meal.jpg"</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isResearchGraph }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Knowledge Graph</div>
+<svg viewBox="0 0 700 320" style="width:100%;height:auto;">
+<line x1="350" y1="160" x2="180" y2="70" stroke="#D9DCD2" stroke-width="2"></line>
+<line x1="350" y1="160" x2="520" y2="70" stroke="#D9DCD2" stroke-width="2"></line>
+<line x1="350" y1="160" x2="180" y2="250" stroke="#D9DCD2" stroke-width="2"></line>
+<line x1="350" y1="160" x2="520" y2="250" stroke="#D9DCD2" stroke-width="2"></line>
+<line x1="350" y1="160" x2="350" y2="30" stroke="#D9DCD2" stroke-width="2"></line>
+<circle cx="350" cy="160" r="34" fill="#2E7D32"></circle><text x="350" y="165" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Food Item</text>
+<circle cx="180" cy="70" r="26" fill="#66BB6A"></circle><text x="180" y="75" text-anchor="middle" fill="#fff" font-size="10">Cereals</text>
+<circle cx="520" cy="70" r="26" fill="#66BB6A"></circle><text x="520" y="75" text-anchor="middle" fill="#fff" font-size="10">Legumes</text>
+<circle cx="180" cy="250" r="26" fill="#F9A825"></circle><text x="180" y="255" text-anchor="middle" fill="#fff" font-size="9">Kenya FCT</text>
+<circle cx="520" cy="250" r="26" fill="#F9A825"></circle><text x="520" y="255" text-anchor="middle" fill="#fff" font-size="9">FAO/INFOODS</text>
+<circle cx="350" cy="30" r="20" fill="#7C4DFF"></circle><text x="350" y="35" text-anchor="middle" fill="#fff" font-size="9">Region</text>
+</svg>
+</div>
+</sc-if>
+</sc-if>
+
+<!-- ===== ADMIN PORTAL ===== -->
+<sc-if value="{{ isAdminPage }}" hint-placeholder-val="{{ false }}">
+<h1 style="font-size:24px;font-weight:800;margin:0 0 4px;">Admin Portal</h1>
+<div style="font-size:13.5px;color:#8A9189;margin-bottom:22px;">Users, datasets, ontology, and content approvals.</div>
+
+<sc-if value="{{ isAdminUsers }}" hint-placeholder-val="{{ true }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Users &amp; Researchers</div>
+<div style="display:grid;grid-template-columns:1.5fr 1fr 0.8fr 0.8fr;font-size:11px;color:#8A9189;font-weight:700;padding:0 6px 8px;border-bottom:1px solid #ECEEE7;">
+<div>Name</div><div>Role</div><div>Status</div><div>Last Active</div>
+</div>
+<sc-for list="{{ adminUsers }}" as="u" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:1.5fr 1fr 0.8fr 0.8fr;align-items:center;padding:11px 6px;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div style="font-weight:600;">{{ u.name }}</div><div style="color:#5C6660;">{{ u.role }}</div>
+<div><span style="background:{{ u.statusBg }};color:{{ u.statusColor }};padding:2px 8px;border-radius:100px;font-size:11px;font-weight:700;text-transform:capitalize;">{{ u.status }}</span></div>
+<div style="color:#8A9189;">{{ u.last }}</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminDatasets }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Datasets</div>
+<sc-for list="{{ datasets }}" as="d" hint-placeholder-count="4">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ d.name }}</span><span style="color:#8A9189;"> · {{ d.records }} records</span></div>
+<span style="background:#EAF4EA;color:#2E7D32;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;">Published</span>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminOntology }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;"><div style="font-weight:700;font-size:15px;">Food Ontology Editor</div><button onClick="{{ toastAdd }}" style="background:#2E7D32;color:#fff;border:none;padding:8px 14px;border-radius:9px;font-weight:700;font-size:12.5px;">+ Add Food Class</button></div>
+<sc-for list="{{ ontology }}" as="cat" hint-placeholder-count="4">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ cat.category }}</span><span style="color:#8A9189;"> · {{ cat.itemsCount }} food classes</span></div>
+<i data-lucide="pencil" style="width:15px;height:15px;color:#5C6660;cursor:pointer;"></i>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminComposition }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Food Composition Management</div>
+<sc-for list="{{ fctSources }}" as="fc" hint-placeholder-count="4">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ fc.name }}</span><span style="color:#8A9189;"> · {{ fc.foods }} foods, {{ fc.coverage }} coverage</span></div>
+<i data-lucide="pencil" style="width:15px;height:15px;color:#5C6660;cursor:pointer;"></i>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminAnnotations }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Image Annotation Queue</div>
+<sc-for list="{{ annotationsDisplay }}" as="an" hint-placeholder-count="4">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ an.food }}</span><span style="color:#8A9189;"> · {{ an.region }}</span></div>
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="background:{{ an.statusBg }};color:{{ an.statusColor }};padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:capitalize;">{{ an.status }}</span>
+<sc-if value="{{ an.isPending }}" hint-placeholder-val="{{ true }}">
+<i data-lucide="check" onClick="{{ an.onApprove }}" style="width:17px;height:17px;color:#2E7D32;cursor:pointer;"></i>
+<i data-lucide="x" onClick="{{ an.onReject }}" style="width:17px;height:17px;color:#C0392B;cursor:pointer;"></i>
+</sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminApprovals }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:18px;padding:22px;">
+<div style="font-weight:700;font-size:15px;margin-bottom:14px;">Approvals</div>
+<sc-for list="{{ approvalsDisplay }}" as="ap" hint-placeholder-count="3">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #F4F5F0;font-size:13px;">
+<div><span style="font-weight:600;">{{ ap.item }}</span><span style="color:#8A9189;"> · {{ ap.type }} · by {{ ap.submitter }}</span></div>
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="background:{{ ap.statusBg }};color:{{ ap.statusColor }};padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:capitalize;">{{ ap.status }}</span>
+<sc-if value="{{ ap.isPending }}" hint-placeholder-val="{{ true }}">
+<i data-lucide="check" onClick="{{ ap.onApprove }}" style="width:17px;height:17px;color:#2E7D32;cursor:pointer;"></i>
+<i data-lucide="x" onClick="{{ ap.onReject }}" style="width:17px;height:17px;color:#C0392B;cursor:pointer;"></i>
+</sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAdminAnalytics }}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+<sc-for list="{{ adminAnalytics }}" as="an" hint-placeholder-count="4">
+<div style="background:#fff;border:1px solid #ECEEE7;border-radius:16px;padding:18px;">
+<div style="font-size:22px;font-weight:800;">{{ an.value }}</div><div style="font-size:12px;color:#8A9189;">{{ an.label }}</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+</sc-if>
+
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;bottom:24px;right:24px;background:#1C1C1C;color:#fff;padding:14px 20px;border-radius:12px;font-size:13.5px;font-weight:600;box-shadow:0 12px 24px rgba(0,0,0,0.2);z-index:100;display:flex;align-items:center;gap:10px;">
+<i data-lucide="check-circle" style="width:16px;height:16px;color:#66BB6A;"></i>{{ toast }}
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    view: 'home',
+    portal: 'clinical',
+    page: 'dashboard',
+    selectedMealId: 4,
+    assessmentStage: 'idle',
+    assessmentText: '',
+    assessmentHasImage: false,
+    researchTab: 'datasets',
+    adminTab: 'users',
+    toast: null,
+    history: [
+      { id: 4, date: 'Today, 10:24 AM', type: 'image', foods: 5, calories: 2145, confidence: 85 },
+      { id: 3, date: 'May 17, 2026, 7:45 PM', type: 'text', foods: 4, calories: 1650, confidence: 80 },
+      { id: 2, date: 'May 17, 2026, 1:30 PM', type: 'image', foods: 6, calories: 1875, confidence: 90 },
+      { id: 1, date: 'May 16, 2026, 8:10 AM', type: 'image', foods: 4, calories: 1990, confidence: 82 },
+    ],
+    annotations: [
+      { id: 1, food: 'Ugali (maize)', region: 'Kenya', status: 'pending' },
+      { id: 2, food: 'Jollof rice', region: 'Nigeria', status: 'pending' },
+      { id: 3, food: 'Injera', region: 'Ethiopia', status: 'approved' },
+      { id: 4, food: 'Nsima', region: 'Malawi', status: 'pending' },
+    ],
+    approvals: [
+      { id: 1, type: 'New food class', item: 'Teff porridge', submitter: 'Dr. Amara Okafor', status: 'pending' },
+      { id: 2, type: 'Dataset upload', item: 'Ethiopia Meal Set v2', submitter: 'CGIAR team', status: 'pending' },
+      { id: 3, type: 'Ontology edit', item: 'Cassava leaves mapping', submitter: 'Dr. Amina Diallo', status: 'approved' },
+    ],
+    settingsState: { emailDigest: true, weeklyReport: true, invites: false },
+  };
+
+  componentDidMount() { this.renderIcons(); }
+  componentDidUpdate() { this.renderIcons(); }
+  renderIcons() { if (window.lucide) window.lucide.createIcons(); }
+
+  showToast(msg) { this.setState({ toast: msg }); setTimeout(() => this.setState({ toast: null }), 2500); }
+
+  goHome = () => this.setState({ view: 'home' });
+  goLogin = () => this.setState({ view: 'login' });
+  goDashboard = () => this.setState({ view: 'app', portal: 'clinical', page: 'dashboard' });
+  goAssessment = () => this.setState({ view: 'app', portal: 'clinical', page: 'assessment', assessmentStage: 'idle' });
+  goResearch = () => this.setState({ view: 'app', portal: 'research', page: 'researchPortal', researchTab: 'datasets' });
+  goAssessmentPage = () => this.setState({ page: 'assessment', assessmentStage: 'idle' });
+  goPatients = () => this.setState({ page: 'patients' });
+  goAssessmentRun = () => { this.setState({ page: 'assessment' }); this.runAnalysis(); };
+
+  trySample = () => {
+    this.setState({
+      view: 'app', portal: 'clinical', page: 'assessment', assessmentStage: 'idle',
+      assessmentText: 'Ugali, sukuma wiki, beans, grilled chicken, and a slice of plantain with a cup of milk.',
+      assessmentHasImage: true,
+    });
+    setTimeout(() => this.runAnalysis(), 300);
+  };
+
+  setPage = (page) => () => this.setState({ page });
+  setPortal = (portal) => () => this.setState({ portal, page: portal === 'clinical' ? 'dashboard' : portal === 'research' ? 'researchPortal' : 'adminPortal' });
+  setResearchTab = (tab) => () => this.setState({ researchTab: tab });
+  setAdminTab = (tab) => () => this.setState({ adminTab: tab });
+  openMeal = (id) => () => this.setState({ page: 'mealDetail', selectedMealId: id });
+  backToHistory = () => this.setState({ page: 'history' });
+
+  setAssessmentText = (e) => this.setState({ assessmentText: e.target.value });
+  toggleImage = () => this.setState((s) => ({ assessmentHasImage: !s.assessmentHasImage }));
+
+  runAnalysis = () => {
+    if (!this.state.assessmentText.trim() && !this.state.assessmentHasImage) return;
+    this.setState({ assessmentStage: 'loading' });
+    setTimeout(() => this.setState({ assessmentStage: 'results' }), 1400);
+  };
+  resetAssessment = () => this.setState({ assessmentStage: 'idle', assessmentText: '', assessmentHasImage: false });
+
+  saveAssessment = () => {
+    const entry = { id: Date.now(), date: 'Just now', type: this.state.assessmentHasImage ? 'image' : 'text', foods: 5, calories: 2145, confidence: 88 };
+    this.setState((s) => ({ history: [entry, ...s.history], page: 'history', assessmentStage: 'idle', assessmentText: '', assessmentHasImage: false }));
+    this.showToast('Assessment saved to history');
+  };
+  generatePdf = () => this.showToast('PDF report generated');
+  exportData = () => this.showToast('Export started — check your downloads');
+  toastAdd = () => this.showToast('Saved');
+  saveSettings = () => this.showToast('Settings saved');
+
+  toggleSetting = (key) => () => this.setState((s) => ({ settingsState: { ...s.settingsState, [key]: !s.settingsState[key] } }));
+  updateAnnotation = (id, status) => () => this.setState((s) => ({ annotations: s.annotations.map((a) => (a.id === id ? { ...a, status } : a)) }));
+  updateApproval = (id, status) => () => this.setState((s) => ({ approvals: s.approvals.map((a) => (a.id === id ? { ...a, status } : a)) }));
+
+  badgeFor(status) {
+    if (status === 'approved' || status === 'active' || status === 'Published') return { bg: '#EAF4EA', color: '#2E7D32' };
+    if (status === 'rejected') return { bg: '#FDECEC', color: '#C0392B' };
+    if (status === 'invited') return { bg: '#F1F6EF', color: '#5C6660' };
+    return { bg: '#FFF4DE', color: '#B45309' };
+  }
+
+  renderVals() {
+    const s = this.state;
+    const navStyle = (active) => active ? 'background:#EAF4EA;color:#2E7D32;' : 'color:#5C6660;';
+
+    const detectedFoods = [
+      { name: 'Ugali (maize)', qty: '1.5 cup' },
+      { name: 'Sukuma wiki', qty: '1 cup' },
+      { name: 'Beans (stewed)', qty: '1/2 cup' },
+      { name: 'Grilled chicken', qty: '120 g' },
+      { name: 'Plantain', qty: '1/2 medium' },
+    ];
+    const mealDetailFoodsRaw = [
+      { name: 'Ugali (maize)', qty: '1.5 cup', confidence: 94, calories: 610, protein: 12, ontologyClass: 'Cereals > Maize products', fctCode: 'KE-0142' },
+      { name: 'Sukuma wiki', qty: '1 cup', confidence: 91, calories: 45, protein: 3, ontologyClass: 'Vegetables > Leafy greens', fctCode: 'KE-0087' },
+      { name: 'Beans (stewed)', qty: '1/2 cup', confidence: 88, calories: 120, protein: 8, ontologyClass: 'Legumes > Common bean, cooked', fctCode: 'KE-0210' },
+      { name: 'Grilled chicken', qty: '120 g', confidence: 90, calories: 250, protein: 38, ontologyClass: 'Meat & poultry > Chicken, grilled', fctCode: 'KE-0330' },
+      { name: 'Plantain', qty: '1/2 medium', confidence: 85, calories: 120, protein: 1, ontologyClass: 'Fruits > Starchy fruits, cooked', fctCode: 'KE-0055' },
+    ];
+    const mealDetailFoods = mealDetailFoodsRaw.map((f) => ({ ...f, confColor: f.confidence >= 88 ? '#2E7D32' : '#B45309', confBg: f.confidence >= 88 ? '#EAF4EA' : '#FFF4DE' }));
+
+    const nutrients = [
+      { label: 'Calories', value: '2,145', unit: 'kcal' },
+      { label: 'Protein', value: '87', unit: 'g' },
+      { label: 'Carbohydrates', value: '278', unit: 'g' },
+      { label: 'Fat', value: '64', unit: 'g' },
+      { label: 'Fiber', value: '28', unit: 'g' },
+      { label: 'Iron', value: '6.7', unit: 'mg' },
+      { label: 'Calcium', value: '280', unit: 'mg' },
+      { label: 'Vitamin A', value: '650', unit: 'µg' },
+    ];
+    const macros = [
+      { label: 'Carbohydrates', pct: 52, grams: 278, color: '#2E7D32' },
+      { label: 'Protein', pct: 21, grams: 87, color: '#7C4DFF' },
+      { label: 'Fat', pct: 27, grams: 64, color: '#F9A825' },
+    ];
+    const donutGradient = `conic-gradient(#2E7D32 0% 52%, #7C4DFF 52% 73%, #F9A825 73% 100%)`;
+    const donutStyle = `background:${donutGradient};`;
+    const heroMacros = macros.map((m) => ({ label: m.label.split(' ')[0], pct: m.pct, color: m.color }));
+
+    const goals = [
+      { label: 'Calories', value: 2145, target: 2400, unit: 'kcal', color: '#E5714B', icon: 'flame' },
+      { label: 'Protein', value: 87, target: 90, unit: 'g', color: '#7C4DFF', icon: 'dumbbell' },
+      { label: 'Fiber', value: 28, target: 30, unit: 'g', color: '#2E7D32', icon: 'leaf' },
+      { label: 'Iron', value: 6.7, target: 8, unit: 'mg', color: '#F9A825', icon: 'droplet' },
+    ];
+    const goalsDisplay = goals.map((g) => ({ ...g, pct: Math.round((g.value / g.target) * 100) }));
+
+    const insights = [
+      { icon: 'check-circle', color: '#2E7D32', title: 'Good source of protein and iron.', desc: 'Your meal provides a good amount of protein and iron.' },
+      { icon: 'alert-triangle', color: '#F9A825', title: 'Increase fruit intake.', desc: 'Try adding more fruits for vitamin C and antioxidants.' },
+      { icon: 'info', color: '#4A90D9', title: 'High in fiber.', desc: 'Great — your meal supports good digestion.' },
+    ];
+
+    const historyDisplay = s.history.map((h) => ({
+      ...h,
+      confBg: h.confidence >= 85 ? '#EAF4EA' : '#FFF4DE',
+      confColor: h.confidence >= 85 ? '#2E7D32' : '#B45309',
+      onView: this.openMeal(h.id),
+    }));
+    const selectedMeal = s.history.find((h) => h.id === s.selectedMealId) || s.history[0];
+
+    const trustBadges = [
+      { icon: 'shield-check', label: 'Privacy First' },
+      { icon: 'flask-conical', label: 'Evidence-Based' },
+      { icon: 'globe-2', label: 'Built for LMICs' },
+    ];
+    const statsRaw = [
+      { label: 'Meals Analyzed', value: 10000, suffix: '+' },
+      { label: 'Local Foods Mapped', value: 2500, suffix: '+' },
+      { label: 'Countries Supported', value: 50, suffix: '+' },
+      { label: 'Food Composition Tables', value: 20, suffix: '+' },
+      { label: 'Privacy Focused', value: 100, suffix: '%' },
+    ];
+    const statsDisplay = statsRaw.map((st) => ({ ...st, display: st.value.toLocaleString() }));
+
+    const features = [
+      { icon: 'image', title: 'Image Assessment', desc: 'Upload a meal photo for instant AI-powered analysis.' },
+      { icon: 'message-square-text', title: 'Text Assessment', desc: 'Describe meals naturally in your own language.' },
+      { icon: 'scan-search', title: 'Food Recognition', desc: 'Recognizes local and regional foods with high accuracy.' },
+      { icon: 'flask-conical', title: 'Nutrient Estimation', desc: 'Calories, protein, and micronutrients calculated per portion.' },
+      { icon: 'network', title: 'Food Ontology', desc: 'Links foods to standardized classes for consistent comparison.' },
+    ];
+    const steps = [
+      { n: 1, icon: 'camera', title: 'Input Your Meal', desc: 'Upload a photo or type a description in your preferred language.', hasArrow: true },
+      { n: 2, icon: 'brain', title: 'AI Food Recognition', desc: 'Our AI identifies foods, recognizes ingredients, and estimates portion sizes.', hasArrow: true },
+      { n: 3, icon: 'database', title: 'Food Ontology Matching', desc: 'Foods are mapped to standardized food classes.', hasArrow: true },
+      { n: 4, icon: 'bar-chart-3', title: 'Nutrient Estimation', desc: 'Nutrients are calculated using local food composition tables.', hasArrow: true },
+      { n: 5, icon: 'heart-handshake', title: 'Recommendations', desc: 'Receive a clear summary with confidence scores and next steps.', hasArrow: false },
+    ];
+    const audiences = [
+      { icon: 'users', title: 'Researchers', desc: 'Access harmonized data, food ontology, and APIs to advance nutrition research.', bg: '#EAF4EA', color: '#2E7D32' },
+      { icon: 'stethoscope', title: 'Clinicians & Dietitians', desc: 'Assess diets accurately and provide culturally relevant nutrition guidance.', bg: '#F3EEFC', color: '#7C4DFF' },
+      { icon: 'landmark', title: 'Public Health Programs', desc: 'Monitor nutrition trends and design evidence-based interventions.', bg: '#FFF4DE', color: '#B45309' },
+      { icon: 'heart-handshake', title: 'Communities', desc: 'Celebrate local foods and make informed choices for healthier lives.', bg: '#E8F1FB', color: '#4A90D9' },
+    ];
+    const missionPoints = ['Global South nutrition science', 'Food diversity across regions', 'Traditional and indigenous foods', 'Food sovereignty and local knowledge'];
+    const partners = ['FAO', 'UNICEF', 'WHO', 'GAIN', 'HarvestPlus', 'CGIAR', 'Nutrition International'];
+    const footerCols = [
+      { title: 'Product', links: ['Features', 'How It Works', 'API Access'] },
+      { title: 'Resources', links: ['Documentation', 'Guides', 'Food Ontology', 'Food Composition Tables'] },
+      { title: 'For Researchers', links: ['Research Use', 'Publications', 'Data & Methods', 'Grants & Funding'] },
+      { title: 'Company', links: ['About Us', 'Our Team', 'Contact Us'] },
+    ];
+    const socialIcons = ['message-circle', 'mail', 'rss', 'share-2'];
+
+    const patients = [
+      { name: 'Grace Wanjiru', age: 34, last: 'Today', calories: '2,145', trendIcon: 'trending-up', trendColor: '#2E7D32' },
+      { name: 'John Mwangi', age: 8, last: 'Yesterday', calories: '1,620', trendIcon: 'trending-up', trendColor: '#2E7D32' },
+      { name: 'Fatima Bello', age: 27, last: '3 days ago', calories: '1,880', trendIcon: 'trending-down', trendColor: '#C0392B' },
+      { name: 'Kwame Asante', age: 45, last: '1 week ago', calories: '2,300', trendIcon: 'minus', trendColor: '#8A9189' },
+    ];
+    const settingsToggles = [
+      { key: 'emailDigest', label: 'Email digest', desc: 'Weekly summary of your assessments' },
+      { key: 'weeklyReport', label: 'Weekly report', desc: 'Auto-generated nutrition report' },
+      { key: 'invites', label: 'Researcher invites', desc: 'Notify when invited to shared studies' },
+    ].map((tg) => {
+      const on = s.settingsState[tg.key];
+      return {
+        ...tg,
+        trackStyle: `background:${on ? '#2E7D32' : '#E7E9E1'};`,
+        knobStyle: on ? 'right:3px;' : 'left:3px;',
+        onClick: this.toggleSetting(tg.key),
+      };
+    });
+
+    const datasets = [
+      { name: 'Kenya Household Meals 2025', region: 'East Africa', records: '12,400', format: 'CSV / JSON' },
+      { name: 'Nigeria Urban Diets', region: 'West Africa', records: '8,900', format: 'CSV' },
+      { name: 'Ethiopia Rural Nutrition Survey', region: 'East Africa', records: '5,200', format: 'JSON' },
+      { name: 'Malawi Community Meals', region: 'Southern Africa', records: '3,750', format: 'CSV' },
+    ];
+    const ontology = [
+      { category: 'Cereals & Starches', items: ['Maize', 'Rice', 'Cassava', 'Teff'] },
+      { category: 'Legumes', items: ['Common bean', 'Cowpea', 'Lentil', 'Groundnut'] },
+      { category: 'Leafy Vegetables', items: ['Sukuma wiki', 'Amaranth', 'Cassava leaves', 'Moringa'] },
+      { category: 'Animal Proteins', items: ['Chicken', 'Tilapia', 'Beef', 'Eggs'] },
+    ].map((c) => ({ ...c, itemsCount: c.items.length }));
+    const fctSources = [
+      { name: 'Kenya Food Composition Table', coverage: '92%', foods: '1,240' },
+      { name: 'West African Food Composition Table', coverage: '87%', foods: '980' },
+      { name: 'FAO/INFOODS', coverage: '78%', foods: '3,100' },
+      { name: 'Ethiopian Food Composition Table', coverage: '81%', foods: '620' },
+    ];
+    const performanceMetrics = [
+      { label: 'Food Recognition Accuracy', value: '91.4%' },
+      { label: 'Portion Estimation Error', value: '±8.2%' },
+      { label: 'Ontology Match Rate', value: '96.1%' },
+      { label: 'Avg. Inference Time', value: '1.8s' },
+    ];
+    const regionAccuracy = [
+      { region: 'East Africa', pct: 93 },
+      { region: 'West Africa', pct: 89 },
+      { region: 'Southern Africa', pct: 86 },
+      { region: 'South Asia', pct: 84 },
+    ];
+    const apiEndpoints = [
+      { method: 'POST', path: '/v1/assess/image', desc: 'Analyze a meal from an image' },
+      { method: 'POST', path: '/v1/assess/text', desc: 'Analyze a meal from a text description' },
+      { method: 'GET', path: '/v1/ontology/{id}', desc: 'Look up a food ontology class' },
+      { method: 'GET', path: '/v1/fct/{code}', desc: 'Fetch food composition table entry' },
+    ];
+
+    const adminUsers = [
+      { name: 'Dr. Amara Okafor', role: 'Researcher', status: 'active', last: '2h ago' },
+      { name: 'Dr. Amina Diallo', role: 'Researcher', status: 'active', last: '1d ago' },
+      { name: 'James Otieno', role: 'Clinician', status: 'invited', last: '—' },
+      { name: 'Grace Banda', role: 'Public Health Officer', status: 'active', last: '4h ago' },
+    ].map((u) => { const b = this.badgeFor(u.status); return { ...u, statusBg: b.bg, statusColor: b.color }; });
+
+    const annotationsDisplay = s.annotations.map((a) => {
+      const b = this.badgeFor(a.status);
+      return { ...a, statusBg: b.bg, statusColor: b.color, isPending: a.status === 'pending', onApprove: this.updateAnnotation(a.id, 'approved'), onReject: this.updateAnnotation(a.id, 'rejected') };
+    });
+    const approvalsDisplay = s.approvals.map((a) => {
+      const b = this.badgeFor(a.status);
+      return { ...a, statusBg: b.bg, statusColor: b.color, isPending: a.status === 'pending', onApprove: this.updateApproval(a.id, 'approved'), onReject: this.updateApproval(a.id, 'rejected') };
+    });
+    const adminAnalytics = [
+      { label: 'Active Users (30d)', value: '842' },
+      { label: 'Assessments (30d)', value: '18,204' },
+      { label: 'Pending Approvals', value: String(s.approvals.filter(a => a.status === 'pending').length) },
+      { label: 'Datasets Published', value: String(datasets.length) },
+    ];
+
+    const clinicalNavTop = [
+      { icon: 'layout-dashboard', label: 'Dashboard', onClick: this.setPage('dashboard'), style: navStyle(s.page === 'dashboard') },
+      { icon: 'plus-circle', label: 'New Assessment', onClick: this.setPage('assessment'), style: navStyle(s.page === 'assessment') },
+      { icon: 'history', label: 'Meal History', onClick: this.setPage('history'), style: navStyle(s.page === 'history' || s.page === 'mealDetail') },
+      { icon: 'users', label: 'My Patients', onClick: this.setPage('patients'), style: navStyle(s.page === 'patients') },
+    ];
+    const clinicalNavKnowledge = [
+      { icon: 'network', label: 'Food Ontology' },
+      { icon: 'database', label: 'Food Composition Tables' },
+      { icon: 'book-open', label: 'Recipes & Preparations' },
+      { icon: 'globe', label: 'Regional Foods' },
+    ];
+    const clinicalNavTools = [
+      { icon: 'file-text', label: 'Reports' },
+      { icon: 'download', label: 'Data Export' },
+      { icon: 'code-2', label: 'API Access' },
+    ];
+    const clinicalNavAccount = [
+      { icon: 'settings', label: 'Settings', onClick: this.setPage('settings'), style: navStyle(s.page === 'settings') },
+      { icon: 'help-circle', label: 'Help & Support' },
+    ];
+    const researchNav = [
+      { icon: 'database', label: 'Dataset Explorer', onClick: this.setResearchTab('datasets'), style: navStyle(s.researchTab === 'datasets') },
+      { icon: 'network', label: 'Food Ontology Browser', onClick: this.setResearchTab('ontology'), style: navStyle(s.researchTab === 'ontology') },
+      { icon: 'table', label: 'Composition Tables', onClick: this.setResearchTab('composition'), style: navStyle(s.researchTab === 'composition') },
+      { icon: 'gauge', label: 'Model Performance', onClick: this.setResearchTab('performance'), style: navStyle(s.researchTab === 'performance') },
+      { icon: 'code-2', label: 'API Documentation', onClick: this.setResearchTab('api'), style: navStyle(s.researchTab === 'api') },
+      { icon: 'share-2', label: 'Knowledge Graph', onClick: this.setResearchTab('graph'), style: navStyle(s.researchTab === 'graph') },
+    ];
+    const adminNav = [
+      { icon: 'users', label: 'Users & Researchers', onClick: this.setAdminTab('users'), style: navStyle(s.adminTab === 'users') },
+      { icon: 'database', label: 'Datasets', onClick: this.setAdminTab('datasets'), style: navStyle(s.adminTab === 'datasets') },
+      { icon: 'network', label: 'Food Ontology Editor', onClick: this.setAdminTab('ontology'), style: navStyle(s.adminTab === 'ontology') },
+      { icon: 'table', label: 'Food Composition', onClick: this.setAdminTab('composition'), style: navStyle(s.adminTab === 'composition') },
+      { icon: 'image', label: 'Image Annotations', onClick: this.setAdminTab('annotations'), style: navStyle(s.adminTab === 'annotations') },
+      { icon: 'clipboard-check', label: 'Approvals', onClick: this.setAdminTab('approvals'), style: navStyle(s.adminTab === 'approvals') },
+      { icon: 'bar-chart-3', label: 'Analytics', onClick: this.setAdminTab('analytics'), style: navStyle(s.adminTab === 'analytics') },
+    ];
+    const portalPills = [
+      { label: 'Clinical', onClick: this.setPortal('clinical'), style: s.portal === 'clinical' ? 'background:#fff;color:#2E7D32;box-shadow:0 1px 3px rgba(0,0,0,0.08);' : 'color:#5C6660;' },
+      { label: 'Research', onClick: this.setPortal('research'), style: s.portal === 'research' ? 'background:#fff;color:#2E7D32;box-shadow:0 1px 3px rgba(0,0,0,0.08);' : 'color:#5C6660;' },
+      { label: 'Admin', onClick: this.setPortal('admin'), style: s.portal === 'admin' ? 'background:#fff;color:#2E7D32;box-shadow:0 1px 3px rgba(0,0,0,0.08);' : 'color:#5C6660;' },
+    ];
+
+    const portalLabel = s.portal === 'clinical' ? 'Clinical' : s.portal === 'research' ? 'Research' : 'Admin';
+
+    return {
+      isHome: s.view === 'home',
+      isLogin: s.view === 'login',
+      isApp: s.view === 'app',
+      isClinical: s.portal === 'clinical',
+      isResearch: s.portal === 'research',
+      isAdmin: s.portal === 'admin',
+      isDashboard: s.page === 'dashboard',
+      isAssessmentPage: s.page === 'assessment',
+      isHistory: s.page === 'history',
+      isMealDetail: s.page === 'mealDetail',
+      isPatients: s.page === 'patients',
+      isSettings: s.page === 'settings',
+      isResearchPage: s.page === 'researchPortal',
+      isAdminPage: s.page === 'adminPortal',
+      isResearchDatasets: s.researchTab === 'datasets',
+      isResearchOntology: s.researchTab === 'ontology',
+      isResearchComposition: s.researchTab === 'composition',
+      isResearchPerformance: s.researchTab === 'performance',
+      isResearchApi: s.researchTab === 'api',
+      isResearchGraph: s.researchTab === 'graph',
+      isAdminUsers: s.adminTab === 'users',
+      isAdminDatasets: s.adminTab === 'datasets',
+      isAdminOntology: s.adminTab === 'ontology',
+      isAdminComposition: s.adminTab === 'composition',
+      isAdminAnnotations: s.adminTab === 'annotations',
+      isAdminApprovals: s.adminTab === 'approvals',
+      isAdminAnalytics: s.adminTab === 'analytics',
+      stageIdle: s.assessmentStage === 'idle',
+      stageLoading: s.assessmentStage === 'loading',
+      stageResults: s.assessmentStage === 'results',
+      hasToast: !!s.toast,
+      toast: s.toast,
+      portalLabel,
+      portalPills,
+      clinicalNavTop, clinicalNavKnowledge, clinicalNavTools, clinicalNavAccount,
+      researchNav, adminNav,
+      goHome: this.goHome, goLogin: this.goLogin, goDashboard: this.goDashboard, goAssessment: this.goAssessment, goResearch: this.goResearch,
+      goAssessmentPage: this.goAssessmentPage, goPatients: this.goPatients, goAssessmentRun: this.goAssessmentRun, trySample: this.trySample,
+      backToHistory: this.backToHistory,
+      trustBadges, statsDisplay, features, steps, audiences, missionPoints, partners, footerCols, socialIcons,
+      heroDonutStyle: donutStyle, heroMacros,
+      uploadLabel: s.assessmentHasImage ? 'Image attached ✓' : 'Upload Image',
+      assessmentText: s.assessmentText, setAssessmentText: this.setAssessmentText, toggleImage: this.toggleImage,
+      detectedFoods, donutStyle, macros, nutrients, goalsDisplay, insights, historyDisplay,
+      dropzoneStyle: s.assessmentHasImage ? 'border-color:#2E7D32;background:#F7FBF7;' : '',
+      dropzoneIcon: s.assessmentHasImage ? 'check-circle-2' : 'upload-cloud',
+      dropzoneLabel: s.assessmentHasImage ? 'Image attached' : 'Drop a meal photo here',
+      charCount: s.assessmentText.length,
+      runAnalysis: this.runAnalysis, resetAssessment: this.resetAssessment, saveAssessment: this.saveAssessment, generatePdf: this.generatePdf,
+      mealDetailFoods, selectedMeal,
+      patients,
+      settingsToggles, saveSettings: this.saveSettings,
+      datasets, ontology, fctSources, performanceMetrics, regionAccuracy, apiEndpoints,
+      adminUsers, annotationsDisplay, approvalsDisplay, adminAnalytics,
+      exportData: this.exportData, toastAdd: this.toastAdd,
+    };
+  }
+}
+</script>
+</body>
+</html>
