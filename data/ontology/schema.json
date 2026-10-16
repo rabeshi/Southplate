@@ -1,0 +1,28 @@
+{
+  "title": "CHOWNET Nigerian Food Concept Registry",
+  "version": "0.1.0",
+  "controlled_values": {
+    "concept_type": [
+      "ingredient",
+      "prepared_food_component",
+      "composite_dish",
+      "generic_class",
+      "condiment"
+    ],
+    "review_status": [
+      "machine_proposed",
+      "curator_reviewed",
+      "expert_validated"
+    ]
+  },
+  "required": [
+    "concept_id",
+    "preferred_name",
+    "concept_type",
+    "food_group",
+    "subgroup",
+    "country",
+    "review_status"
+  ],
+  "safety": "Hierarchy membership alone must never be used to infer nutrient composition."
+}

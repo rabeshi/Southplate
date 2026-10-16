@@ -1,2 +1,8 @@
 .thumbnail
 .vercel
+
+# Generated caches and temporary Office locks
+__pycache__/
+*.pyc
+*.cache
+~$*

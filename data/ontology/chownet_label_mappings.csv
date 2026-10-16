@@ -1,0 +1,173 @@
+﻿source_dataset,source_class_id,observed_label,concept_id,preferred_name,mapping_relation,annotation_count,observed_in_annotations,mapping_confidence,review_status,review_priority,review_notes
+CHOWNET-V1,0,Aganyi Beans,NGA-CHOW-aganyi-beans-3678b603,Aganyi Beans,unresolved,4,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,1,Aganyi Stew,NGA-CHOW-aganyi-stew-81489053,Aganyi Stew,unresolved,4,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,2,Amala,NGA-CHOW-amala-0b75933b,Amala,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,3,Assorted Meat,NGA-CHOW-assorted-meat-505fecf8,Assorted Meat,exact_match,8,true,high,machine_proposed,low,
+CHOWNET-V1,4,Assorted Protein,NGA-CHOW-assorted-protein-7caab4a5,Assorted Protein,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,5,Asun,NGA-CHOW-asun-9c35a20c,Asun,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,6,Baked Beans,NGA-CHOW-baked-beans-cc24323d,Baked Beans,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,7,Banana Bread,NGA-CHOW-banana-bread-c1a6662c,Banana Bread,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,8,Baton Fried Plantain,NGA-CHOW-baton-fried-plantain-a0f05960,Baton Fried Plantain,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,9,Baton Fried Potato,NGA-CHOW-baton-fried-potato-e28e4a09,Baton Fried Potato,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,10,Baton Fried Yam,NGA-CHOW-baton-fried-yam-3f08a91f,Baton Fried Yam,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,11,Beans,NGA-CHOW-beans-3cf7c8d0,Beans,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,12,Beans Porridge,NGA-CHOW-beans-porridge-131878e3,Beans Porridge,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,13,Beef,NGA-CHOW-beef-1b57bbec,Beef,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,14,Beef Tripe,NGA-CHOW-beef-tripe-e0f4e46e,Beef Tripe,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,15,Birthday Cake,NGA-CHOW-birthday-cake-0f1c4e87,Birthday Cake,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,16,Biscuit,NGA-CHOW-biscuit-5ab86061,Biscuit,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,17,Black Swallow,NGA-CHOW-black-swallow-452bf610,Black Swallow,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,18,Boiled Chicken,NGA-CHOW-boiled-chicken-bf653cac,Boiled Chicken,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,19,Boiled Egg,NGA-CHOW-boiled-egg-7e8b6d5e,Boiled Egg,exact_match,10,true,high,machine_proposed,low,
+CHOWNET-V1,20,Boiled Fish,NGA-CHOW-boiled-fish-1b169bf4,Boiled Fish,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,21,Boiled Potato,NGA-CHOW-boiled-potato-6f8c0f25,Boiled Potato,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,22,Boiled Turkey,NGA-CHOW-boiled-turkey-28d8274f,Boiled Turkey,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,23,Boiled Yam,NGA-CHOW-boiled-yam-26b8acb3,Boiled Yam,exact_match,9,true,high,machine_proposed,low,
+CHOWNET-V1,24,Bread,NGA-CHOW-bread-6ff291d8,Bread,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,25,Cabbage,NGA-CHOW-cabbage-05d1ce01,Cabbage,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,26,Cake,NGA-CHOW-cake-5ddc2ae1,Cake,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,27,Chicken,NGA-CHOW-chicken-cef7e592,Chicken,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,28,Coconot Rice,NGA-CHOW-coconut-rice-b1c4e929,Coconut Rice,exact_synonym,1,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,29,Coleslaw,NGA-CHOW-coleslaw-a2dceb25,Coleslaw,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,30,Cow Skin,NGA-CHOW-cow-skin-79fabe71,Cow Skin,exact_match,15,true,high,machine_proposed,low,
+CHOWNET-V1,31,Cucumber,NGA-CHOW-cucumber-868d0992,Cucumber,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,32,Diced Fried Plantain,NGA-CHOW-diced-fried-plantain-5aece6a9,Diced Fried Plantain,exact_match,36,true,high,machine_proposed,low,
+CHOWNET-V1,33,Diced Sliced Plantain,NGA-CHOW-diced-sliced-plantain-998e1a7a,Diced Sliced Plantain,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,34,Dry Fish,NGA-CHOW-dry-fish-ecceb669,Dry Fish,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,35,Eba,NGA-CHOW-eba-9883157c,Eba,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,36,Egg,NGA-CHOW-egg-4fa6024f,Egg,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,37,Egg Noodles,NGA-CHOW-egg-noodles-10fa13ab,Egg Noodles,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,38,Egg White,NGA-CHOW-egg-white-51ccffcc,Egg White,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,39,Egg Yolk,NGA-CHOW-egg-yolk-392d1585,Egg Yolk,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,40,Egusi Soup,NGA-CHOW-egusi-soup-03b4ef57,Egusi Soup,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,41,Ewedu,NGA-CHOW-ewedu-a85d35ed,Ewedu,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,42,Fish,NGA-CHOW-fish-64875fcc,Fish,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,43,Fish Sauce,NGA-CHOW-fish-sauce-3f594d5e,Fish Sauce,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,44,Fish Stew,NGA-CHOW-fish-stew-0ddb980b,Fish Stew,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,45,Fried Beef,NGA-CHOW-fried-beef-29d6a1fc,Fried Beef,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,46,Fried Chicken,NGA-CHOW-fried-chicken-21f6cded,Fried Chicken,exact_match,18,true,high,machine_proposed,low,
+CHOWNET-V1,47,Fried Egg,NGA-CHOW-fried-egg-8d91499c,Fried Egg,exact_match,10,true,high,machine_proposed,low,
+CHOWNET-V1,48,Fried Fish,NGA-CHOW-fried-fish-ec54b71f,Fried Fish,exact_match,5,true,high,machine_proposed,low,
+CHOWNET-V1,49,Fried Irish Potato,NGA-CHOW-fried-irish-potato-505da65c,Fried Irish Potato,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,50,Fried Plantain,NGA-CHOW-fried-plantain-2bd64429,Fried Plantain,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,51,Fried Potato,NGA-CHOW-fried-potato-0a0d7236,Fried Potato,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,52,Fried Prawns,NGA-CHOW-fried-prawns-165568f8,Fried Prawns,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,53,Fried Rice,NGA-CHOW-fried-rice-2d2b3e80,Fried Rice,exact_match,15,true,high,machine_proposed,low,
+CHOWNET-V1,54,Fried Turkey,NGA-CHOW-fried-turkey-345c1dde,Fried Turkey,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,55,Fried Yam,NGA-CHOW-fried-yam-20db7634,Fried Yam,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,56,Fufu,NGA-CHOW-fufu-c11e23a3,Fufu,exact_match,6,true,high,machine_proposed,low,
+CHOWNET-V1,57,Garnished Fried Egg,NGA-CHOW-garnished-fried-egg-133a1c06,Garnished Fried Egg,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,58,Garnished Noodle,NGA-CHOW-garnished-noodle-f1ce2d23,Garnished Noodle,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,59,Garnished Spaghetti,NGA-CHOW-garnished-spaghetti-30c6ec37,Garnished Spaghetti,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,60,Garnished Vegetables,NGA-CHOW-garnished-vegetables-bd5cb739,Garnished Vegetables,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,61,Gbegiri,NGA-CHOW-gbegiri-c5984fe8,Gbegiri,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,62,Gbegiri and Ewedu,NGA-CHOW-gbegiri-and-ewedu-b5a8ceb4,Gbegiri and Ewedu,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,63,Green Sauce,NGA-CHOW-green-sauce-870dc5b7,Green Sauce,unresolved,1,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,64,Grilled Chicken,NGA-CHOW-grilled-chicken-35d9a834,Grilled Chicken,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,65,Grilled Turkey,NGA-CHOW-grilled-turkey-602a669b,Grilled Turkey,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,66,Grinded Pepper,NGA-CHOW-grinded-pepper-9ef1e4a9,Grinded Pepper,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,67,Hot dog,NGA-CHOW-hot-dog-fe123c37,Hot dog,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,68,Jollof Pasta,NGA-CHOW-jollof-pasta-1639fb2f,Jollof Pasta,exact_match,6,true,high,machine_proposed,low,
+CHOWNET-V1,69,Jollof Rice,NGA-CHOW-jollof-rice-68030786,Jollof Rice,exact_match,33,true,high,machine_proposed,low,
+CHOWNET-V1,70,Macaroni,NGA-CHOW-macaroni-d9677a4f,Macaroni,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,71,Macaroni and Cheese,NGA-CHOW-macaroni-and-cheese-6c1cf891,Macaroni and Cheese,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,72,Mashed Porridge Yam,NGA-CHOW-mashed-yam-porridge-bde781f5,Mashed Yam Porridge,exact_synonym,5,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,73,Mashed Yam Porridge,NGA-CHOW-mashed-yam-porridge-bde781f5,Mashed Yam Porridge,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,74,Meat,NGA-CHOW-meat-bb40f75a,Meat,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,75,Meat  Stir-fry,NGA-CHOW-meat-stir-fry-6dd7d2cc,Meat Stir-Fry,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,76,Meat and Veggie Stir-Fry,NGA-CHOW-meat-and-veggie-stir-fry-a183b3ab,Meat and Veggie Stir-Fry,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,77,Milk,NGA-CHOW-milk-cf5dbf0e,Milk,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,78,Mixed Protein Sauce,NGA-CHOW-mixed-protein-sauce-aaf13b45,Mixed Protein Sauce,unresolved,1,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,79,Mixed Rice,NGA-CHOW-mixed-rice-2f10e6a6,Mixed Rice,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,80,Moi-Moi,NGA-CHOW-moi-moi-38897f77,Moi-Moi,exact_match,9,true,high,machine_proposed,low,
+CHOWNET-V1,81,Noddles,NGA-CHOW-noodles-00ac24f8,Noodles,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,82,Noodle,NGA-CHOW-noodles-00ac24f8,Noodles,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,83,Noodles,NGA-CHOW-noodles-00ac24f8,Noodles,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,84,Ofada Rice,NGA-CHOW-ofada-rice-c0aeb377,Ofada Rice,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,85,Ofada Stew,NGA-CHOW-ofada-stew-b4b8f03c,Ofada Stew,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,86,Other,NGA-CHOW-other-d0941e68,Other,unresolved,6,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,87,Others,NGA-CHOW-other-d0941e68,Other,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Normalization merge requires curator confirmation. Class is configured but absent from current annotations."
+CHOWNET-V1,88,Pap,NGA-CHOW-pap-627a1957,Pap,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,89,Pap and Milk,NGA-CHOW-pap-and-milk-a8f4d832,Pap and Milk,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,90,Pepped Boiled Chicken,NGA-CHOW-peppered-boiled-chicken-951dc2e5,Peppered Boiled Chicken,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,91,Pepped Boiled Fish,NGA-CHOW-peppered-boiled-fish-be49324d,Peppered Boiled Fish,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,92,Pepped Fried Beef,NGA-CHOW-peppered-fried-beef-106ceea4,Peppered Fried Beef,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,93,Pepped Fried Chicken,NGA-CHOW-peppered-fried-chicken-986d066f,Peppered Fried Chicken,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,94,Pepped Fried Egg,NGA-CHOW-peppered-fried-egg-33d2d2f1,Peppered Fried Egg,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,95,Pepper Sauce,NGA-CHOW-pepper-sauce-355fac55,Pepper Sauce,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,96,Peppered Beef,NGA-CHOW-peppered-beef-a9cfcf42,Peppered Beef,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,97,Peppered Boiled Chicken,NGA-CHOW-peppered-boiled-chicken-951dc2e5,Peppered Boiled Chicken,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,98,Peppered Boiled Fish,NGA-CHOW-peppered-boiled-fish-be49324d,Peppered Boiled Fish,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,99,Peppered Cow Skin,NGA-CHOW-peppered-cow-skin-ee282b35,Peppered Cow Skin,exact_match,6,true,high,machine_proposed,low,
+CHOWNET-V1,100,Peppered Fried Beef,NGA-CHOW-peppered-fried-beef-106ceea4,Peppered Fried Beef,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,101,Peppered Fried Chicken,NGA-CHOW-peppered-fried-chicken-986d066f,Peppered Fried Chicken,exact_match,8,true,high,machine_proposed,low,
+CHOWNET-V1,102,Peppered Fried Egg,NGA-CHOW-peppered-fried-egg-33d2d2f1,Peppered Fried Egg,exact_match,4,true,high,machine_proposed,low,
+CHOWNET-V1,103,Peppered Fried Fish,NGA-CHOW-peppered-fried-fish-06cc88c5,Peppered Fried Fish,exact_match,9,true,high,machine_proposed,low,
+CHOWNET-V1,104,Peppered Noodles,NGA-CHOW-peppered-noodles-f2e056e4,Peppered Noodles,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,105,Peppered Snail,NGA-CHOW-peppered-snail-707702b6,Peppered Snail,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,106,Plain Beans,NGA-CHOW-plain-beans-7d7ed393,Plain Beans,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,107,Plantain,NGA-CHOW-plantain-670e8192,Plantain,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,108,Porridge Beans,NGA-CHOW-beans-porridge-131878e3,Beans Porridge,exact_synonym,2,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,109,Porridge Yam,NGA-CHOW-porridge-yam-b811dc88,Porridge Yam,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,110,Porridge Yam and Beans,NGA-CHOW-porridge-yam-and-beans-af5882f9,Porridge Yam and Beans,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,111,Porrige Beans,NGA-CHOW-beans-porridge-131878e3,Beans Porridge,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,112,Potato,NGA-CHOW-potato-3e2e95f5,Potato,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,113,Pounded Yam,NGA-CHOW-pounded-yam-4596b138,Pounded Yam,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,114,Prawn,NGA-CHOW-prawns-1dca3a0d,Prawns,exact_synonym,1,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,115,Prawns,NGA-CHOW-prawns-1dca3a0d,Prawns,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,116,Protein,NGA-CHOW-protein-2c65275a,Protein,unresolved,19,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,117,Red Tomato,NGA-CHOW-red-tomato-0413b632,Red Tomato,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,118,Rice,NGA-CHOW-rice-6939278d,Rice,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,119,Rice and Beans,NGA-CHOW-rice-and-beans-10ddc077,Rice and Beans,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,120,Roasted Chicken,NGA-CHOW-roasted-chicken-bb68b9b0,Roasted Chicken,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,121,Roasted Turkey,NGA-CHOW-roasted-turkey-108bf8cb,Roasted Turkey,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,122,Salad,NGA-CHOW-salad-f41c041b,Salad,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,123,Sauce,NGA-CHOW-sauce-80e6e79c,Sauce,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,124,Sausage,NGA-CHOW-sausage-0bd7ea46,Sausage,exact_match,6,true,high,machine_proposed,low,
+CHOWNET-V1,125,Sausage Noodle,NGA-CHOW-sausage-noodles-fe663a17,Sausage Noodles,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,126,Sausage Noodles,NGA-CHOW-sausage-noodles-fe663a17,Sausage Noodles,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,127,Sausage Roll,NGA-CHOW-sausage-roll-602dbd11,Sausage Roll,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,128,Sausage Shrimps Veggie Stir-fry,NGA-CHOW-sausage-shrimps-veggie-stir-fry-2f881577,Sausage Shrimps Veggie Stir-Fry,exact_synonym,1,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,129,Sausage Shrimps Veggie Stir-fry Pasta,NGA-CHOW-sausage-shrimps-veggie-stir-fry-pasta-851d34db,Sausage Shrimps Veggie Stir-Fry Pasta,exact_synonym,1,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,130,Sausage Veggie Stir-fry Pasta,NGA-CHOW-sausage-veggie-stir-fry-pasta-20da7220,Sausage Veggie Stir-Fry Pasta,exact_synonym,1,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,131,"Sausage, Shrimps, Veggie Stir-fry",NGA-CHOW-sausage-shrimps-veggie-stir-fry-2f881577,Sausage Shrimps Veggie Stir-Fry,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,132,"Sausage, Shrimps, Veggie Stir-fry Pasta",NGA-CHOW-sausage-shrimps-veggie-stir-fry-pasta-851d34db,Sausage Shrimps Veggie Stir-Fry Pasta,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,133,"Sausage, Veggie Stir-fry Pasta",NGA-CHOW-sausage-veggie-stir-fry-pasta-20da7220,Sausage Veggie Stir-Fry Pasta,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,134,Seasoned Chicken,NGA-CHOW-seasoned-chicken-4974b525,Seasoned Chicken,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,135,Shawarma,NGA-CHOW-shawarma-fc3584bf,Shawarma,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,136,Shrimp,NGA-CHOW-shrimps-3056fa8c,Shrimps,exact_synonym,0,false,medium,machine_proposed,medium,Normalization merge requires curator confirmation. Class is configured but absent from current annotations.
+CHOWNET-V1,137,Shrimps,NGA-CHOW-shrimps-3056fa8c,Shrimps,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,138,Sliced Bread,NGA-CHOW-sliced-bread-327d6abc,Sliced Bread,exact_match,5,true,high,machine_proposed,low,
+CHOWNET-V1,139,Sliced Fried Plaintain,NGA-CHOW-sliced-fried-plantain-06f852e5,Sliced Fried Plantain,exact_synonym,4,true,medium,machine_proposed,medium,Normalization merge requires curator confirmation.
+CHOWNET-V1,140,Sliced Fried Plantain,NGA-CHOW-sliced-fried-plantain-06f852e5,Sliced Fried Plantain,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,141,Snail,NGA-CHOW-snail-9054cc23,Snail,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,142,Soup,NGA-CHOW-soup-93ad1eda,Soup,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,143,Spaghetti,NGA-CHOW-spaghetti-2acfa5d1,Spaghetti,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,144,Spring Roll,NGA-CHOW-spring-roll-05d959f2,Spring Roll,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,145,Stew,NGA-CHOW-stew-83c74738,Stew,unresolved,11,true,low,machine_proposed,high,"Label is broad, ambiguous, or locally underspecified."
+CHOWNET-V1,146,Stock Fish,NGA-CHOW-stock-fish-16cd56e0,Stock Fish,exact_match,7,true,high,machine_proposed,low,
+CHOWNET-V1,147,Suya,NGA-CHOW-suya-a29bae79,Suya,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,148,Swallow,NGA-CHOW-swallow-a74d7c22,Swallow,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,149,Tomato,NGA-CHOW-tomato-321f6b7e,Tomato,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,150,Tomato Soup,NGA-CHOW-tomato-soup-731a34a0,Tomato Soup,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,151,Turkey,NGA-CHOW-turkey-5009c8e1,Turkey,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,152,Vegetable,NGA-CHOW-vegetable-f13a905f,Vegetable,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,153,Vegetable Egusi Soup,NGA-CHOW-vegetable-egusi-soup-b291bea5,Vegetable Egusi Soup,exact_match,7,true,high,machine_proposed,low,
+CHOWNET-V1,154,Vegetable Soup,NGA-CHOW-vegetable-soup-50141a1e,Vegetable Soup,exact_match,7,true,high,machine_proposed,low,
+CHOWNET-V1,155,Vegetable Stew,NGA-CHOW-vegetable-stew-0049630d,Vegetable Stew,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,156,Veggie Fried Egg,NGA-CHOW-veggie-fried-egg-140de8e9,Veggie Fried Egg,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,157,Veggie Jollof Pasta,NGA-CHOW-veggie-jollof-pasta-01c7d5bc,Veggie Jollof Pasta,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,158,Veggie Jollof Rice,NGA-CHOW-veggie-jollof-rice-e2696fad,Veggie Jollof Rice,exact_match,3,true,high,machine_proposed,low,
+CHOWNET-V1,159,Veggie Noodles,NGA-CHOW-veggie-noodles-ed194249,Veggie Noodles,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,160,Veggie Pasta,NGA-CHOW-veggie-pasta-ff13ac25,Veggie Pasta,exact_match,6,true,high,machine_proposed,low,
+CHOWNET-V1,161,Veggie Sauce,NGA-CHOW-veggie-sauce-4902cde2,Veggie Sauce,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,162,Veggie Stir-fry,NGA-CHOW-veggie-stir-fry-9adddd9d,Veggie Stir-fry,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,163,Veggie Stir-fry Pasta,NGA-CHOW-veggie-stir-fry-pasta-63b0a703,Veggie Stir-fry Pasta,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,164,Veggie Stir-fry with Sausage and Shrimps,NGA-CHOW-veggie-stir-fry-with-sausage-and-shrimps-97e767ae,Veggie Stir-fry with Sausage and Shrimps,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,165,White  Swallow,NGA-CHOW-white-swallow-d2b6879d,White Swallow,unresolved,0,false,low,machine_proposed,medium,"Label is broad, ambiguous, or locally underspecified. Class is configured but absent from current annotations."
+CHOWNET-V1,166,White Rice,NGA-CHOW-white-rice-b0318fd4,White Rice,exact_match,2,true,high,machine_proposed,low,
+CHOWNET-V1,167,Wrapped Fufu,NGA-CHOW-wrapped-fufu-6499de2e,Wrapped Fufu,exact_match,1,true,high,machine_proposed,low,
+CHOWNET-V1,168,Yam,NGA-CHOW-yam-8813acb6,Yam,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,169,Yam Porridge,NGA-CHOW-yam-porridge-52413681,Yam Porridge,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,170,Yam and Beans Porridge,NGA-CHOW-yam-and-beans-porridge-a40dae7b,Yam and Beans Porridge,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.
+CHOWNET-V1,171,Yellow Tomato,NGA-CHOW-yellow-tomato-f2393b8a,Yellow Tomato,exact_match,0,false,high,machine_proposed,low,Class is configured but absent from current annotations.

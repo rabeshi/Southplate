@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "source_category_count": 172,
+  "source_ids_contiguous": true,
+  "normalized_concept_count": 154,
+  "mapping_count": 172,
+  "represented_source_classes": 98,
+  "unrepresented_source_classes": 74,
+  "annotation_count": 432,
+  "annotation_count_by_split": {
+    "train": 312,
+    "validation": 120
+  },
+  "annotation_errors": [
+    {
+      "file": "experiments\\object_detection\\yolov8\\train\\food\\labels\\20.txt",
+      "line": 1,
+      "issue": "coordinate_out_of_range",
+      "values": [
+        0.5000000000000001,
+        0.5022779043280182,
+        1.0000000000000002,
+        0.9954441913439634
+      ]
+    }
+  ],
+  "duplicate_concept_ids": [],
+  "orphan_mapping_concept_ids": [],
+  "high_priority_review_records": 49,
+  "medium_priority_review_records": 48
+}
